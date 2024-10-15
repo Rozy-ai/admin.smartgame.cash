@@ -11,162 +11,2515 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.absolute{position:absolute}.relative{position:relative}.-left-20{left:-5rem}.top-0{top:0px}.-bottom-16{bottom:-4rem}.-left-16{left:-4rem}.-mx-3{margin-left:-0.75rem;margin-right:-0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.size-12{width:3rem;height:3rem}.size-5{width:1.25rem;height:1.25rem}.size-6{width:1.5rem;height:1.5rem}.h-12{height:3rem}.h-40{height:10rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-full{width:100%}.w-\[calc\(100\%\+8rem\)\]{width:calc(100% + 8rem)}.w-auto{width:auto}.max-w-\[877px\]{max-width:877px}.max-w-2xl{max-width:42rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.items-stretch{align-items:stretch}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.gap-2{gap:0.5rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.self-center{align-self:center}.overflow-hidden{overflow:hidden}.rounded-\[10px\]{border-radius:10px}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.rounded-sm{border-radius:0.125rem}.bg-\[\#FF2D20\]\/10{background-color:rgb(255 45 32 / 0.1)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gradient-to-b{background-image:linear-gradient(to bottom, var(--tw-gradient-stops))}.from-transparent{--tw-gradient-from:transparent var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-white{--tw-gradient-to:rgb(255 255 255 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #fff var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-white{--tw-gradient-to:#fff var(--tw-gradient-to-position)}.stroke-\[\#FF2D20\]{stroke:#FF2D20}.object-cover{object-fit:cover}.object-top{object-position:top}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.pt-3{padding-top:0.75rem}.text-center{text-align:center}.font-sans{font-family:Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-sm\/relaxed{font-size:0.875rem;line-height:1.625}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-semibold{font-weight:600}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-\[0px_14px_34px_0px_rgba\(0\2c 0\2c 0\2c 0\.08\)\]{--tw-shadow:0px 14px 34px 0px rgba(0,0,0,0.08);--tw-shadow-colored:0px 14px 34px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.ring-transparent{--tw-ring-color:transparent}.ring-white\/\[0\.05\]{--tw-ring-color:rgb(255 255 255 / 0.05)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.06\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.06));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.drop-shadow-\[0px_4px_34px_rgba\(0\2c 0\2c 0\2c 0\.25\)\]{--tw-drop-shadow:drop-shadow(0px 4px 34px rgba(0,0,0,0.25));filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.selection\:bg-\[\#FF2D20\] *::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-\[\#FF2D20\]::selection{--tw-bg-opacity:1;background-color:rgb(255 45 32 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity))}.hover\:text-black\/70:hover{color:rgb(0 0 0 / 0.7)}.hover\:ring-black\/20:hover{--tw-ring-color:rgb(0 0 0 / 0.2)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus-visible\:ring-1:focus-visible{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}@media (min-width: 640px){.sm\:size-16{width:4rem;height:4rem}.sm\:size-6{width:1.5rem;height:1.5rem}.sm\:pt-5{padding-top:1.25rem}}@media (min-width: 768px){.md\:row-span-3{grid-row:span 3 / span 3}}@media (min-width: 1024px){.lg\:col-start-2{grid-column-start:2}.lg\:h-16{height:4rem}.lg\:max-w-7xl{max-width:80rem}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:flex-col{flex-direction:column}.lg\:items-end{align-items:flex-end}.lg\:justify-center{justify-content:center}.lg\:gap-8{gap:2rem}.lg\:p-10{padding:2.5rem}.lg\:pb-10{padding-bottom:2.5rem}.lg\:pt-0{padding-top:0px}.lg\:text-\[\#FF2D20\]{--tw-text-opacity:1;color:rgb(255 45 32 / var(--tw-text-opacity))}}@media (prefers-color-scheme: dark){.dark\:block{display:block}.dark\:hidden{display:none}.dark\:bg-black{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity))}.dark\:bg-zinc-900{--tw-bg-opacity:1;background-color:rgb(24 24 27 / var(--tw-bg-opacity))}.dark\:via-zinc-900{--tw-gradient-to:rgb(24 24 27 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #18181b var(--tw-gradient-via-position), var(--tw-gradient-to)}.dark\:to-zinc-900{--tw-gradient-to:#18181b var(--tw-gradient-to-position)}.dark\:text-white\/50{color:rgb(255 255 255 / 0.5)}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-white\/70{color:rgb(255 255 255 / 0.7)}.dark\:ring-zinc-800{--tw-ring-opacity:1;--tw-ring-color:rgb(39 39 42 / var(--tw-ring-opacity))}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:hover\:text-white\/70:hover{color:rgb(255 255 255 / 0.7)}.dark\:hover\:text-white\/80:hover{color:rgb(255 255 255 / 0.8)}.dark\:hover\:ring-zinc-700:hover{--tw-ring-opacity:1;--tw-ring-color:rgb(63 63 70 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-\[\#FF2D20\]:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 45 32 / var(--tw-ring-opacity))}.dark\:focus-visible\:ring-white:focus-visible{--tw-ring-opacity:1;--tw-ring-color:rgb(255 255 255 / var(--tw-ring-opacity))}}
-        </style>
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Bootstrap Css -->
+        <link href="assets/css/bootstrap.min.css" id="bootstrap-style" rel="stylesheet" type="text/css" />
+        <!-- Icons Css -->
+        <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <!-- App Css-->
+        <link href="assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
     </head>
-    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
-        <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-            <img id="background" class="absolute -left-20 top-0 max-w-[877px]" src="https://laravel.com/assets/img/welcome/background.svg" alt="Laravel background" />
-            <div class="relative min-h-screen flex flex-col items-center justify-center selection:bg-[#FF2D20] selection:text-white">
-                <div class="relative w-full max-w-2xl px-6 lg:max-w-7xl">
-                    <header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3">
-                        <div class="flex lg:justify-center lg:col-start-2">
-                            <svg class="h-12 w-auto text-white lg:h-16 lg:text-[#FF2D20]" viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="currentColor"/></svg>
-                        </div>
-                        @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
+    <body data-sidebar="dark">
 
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
-                    </header>
-
-                    <main class="mt-6">
-                        <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
-                            <a
-                                href="https://laravel.com/docs"
-                                id="docs-card"
-                                class="flex flex-col items-start gap-6 overflow-hidden rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div id="screenshot-container" class="relative flex w-full flex-1 items-stretch">
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-light.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.06)] dark:hidden"
-                                        onerror="
-                                            document.getElementById('screenshot-container').classList.add('!hidden');
-                                            document.getElementById('docs-card').classList.add('!row-span-1');
-                                            document.getElementById('docs-card-content').classList.add('!flex-row');
-                                            document.getElementById('background').classList.add('!hidden');
-                                        "
-                                    />
-                                    <img
-                                        src="https://laravel.com/assets/img/welcome/docs-dark.svg"
-                                        alt="Laravel documentation screenshot"
-                                        class="hidden aspect-video h-full w-full flex-1 rounded-[10px] object-top object-cover drop-shadow-[0px_4px_34px_rgba(0,0,0,0.25)] dark:block"
-                                    />
-                                    <div
-                                        class="absolute -bottom-16 -left-16 h-40 w-[calc(100%+8rem)] bg-gradient-to-b from-transparent via-white to-white dark:via-zinc-900 dark:to-zinc-900"
-                                    ></div>
+        <!-- <body data-layout="horizontal"> -->
+    
+            <!-- Begin page -->
+            <div id="layout-wrapper">
+    
+                
+                <header id="page-topbar" class="isvertical-topbar">
+                    <div class="navbar-header">
+                        <div class="d-flex">
+                            <!-- LOGO -->
+                            <div class="navbar-brand-box">
+                                <a href="index.html" class="logo logo-dark">
+                                    <span class="logo-sm">
+                                        <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    </span>
+                                    <span class="logo-lg">
+                                        <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    </span>
+                                </a>
+    
+                                <a href="index.html" class="logo logo-light">
+                                    <span class="logo-lg">
+                                        <img src="assets/images/logo-light.png" alt="" height="22">
+                                    </span>
+                                    <span class="logo-sm">
+                                        <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                                    </span>
+                                </a>
+                            </div>
+    
+                            <button type="button" class="btn btn-sm px-3 font-size-16 header-item vertical-menu-btn topnav-hamburger">
+                                <div class="hamburger-icon open">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </div>
-
-                                <div class="relative flex items-center gap-6 lg:items-end">
-                                    <div id="docs-card-content" class="flex items-start gap-6 lg:flex-col">
-                                        <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                            <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="#FF2D20" d="M23 4a1 1 0 0 0-1.447-.894L12.224 7.77a.5.5 0 0 1-.448 0L2.447 3.106A1 1 0 0 0 1 4v13.382a1.99 1.99 0 0 0 1.105 1.79l9.448 4.728c.14.065.293.1.447.1.154-.005.306-.04.447-.105l9.453-4.724a1.99 1.99 0 0 0 1.1-1.789V4ZM3 6.023a.25.25 0 0 1 .362-.223l7.5 3.75a.251.251 0 0 1 .138.223v11.2a.25.25 0 0 1-.362.224l-7.5-3.75a.25.25 0 0 1-.138-.22V6.023Zm18 11.2a.25.25 0 0 1-.138.224l-7.5 3.75a.249.249 0 0 1-.329-.099.249.249 0 0 1-.033-.12V9.772a.251.251 0 0 1 .138-.224l7.5-3.75a.25.25 0 0 1 .362.224v11.2Z"/><path fill="#FF2D20" d="m3.55 1.893 8 4.048a1.008 1.008 0 0 0 .9 0l8-4.048a1 1 0 0 0-.9-1.785l-7.322 3.706a.506.506 0 0 1-.452 0L4.454.108a1 1 0 0 0-.9 1.785H3.55Z"/></svg>
+                            </button>
+    
+                            <div class="d-none d-sm-block ms-3 align-self-center">
+                                <h4 class="page-title">Dashboard</h4>
+                            </div>
+    
+                        </div>
+    
+                        <div class="d-flex">
+                            <div class="dropdown">
+                                <button type="button" class="btn header-item"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="search-outline"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
+                                    <form class="p-2">
+                                        <div class="search-box">
+                                            <div class="position-relative">
+                                                <input type="text" class="form-control bg-light border-0" placeholder="Search...">
+                                                <i class="search-icon" data-eva="search-outline" data-eva-height="26" data-eva-width="26"></i>
+                                            </div>
                                         </div>
-
-                                        <div class="pt-3 sm:pt-5 lg:pt-0">
-                                            <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
-
-                                            <p class="mt-4 text-sm/relaxed">
-                                                Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                            </p>
+                                    </form>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-inline-block language-switch">
+                                <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
+                                        <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
+                                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
+                                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
+                                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-none d-lg-inline-block">
+                                <button type="button" class="btn header-item noti-icon"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="grid-outline"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+                                    <div class="p-3">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h5 class="m-0 font-size-15"> Web Apps </h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#!" class="small fw-semibold text-decoration-underline"> View All</a>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <svg class="size-6 shrink-0 stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
+                                    <div class="px-lg-2 pb-2">
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/github.png" alt="Github">
+                                                    <span>GitHub</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                    <span>Bitbucket</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                                    <span>Dribbble</span>
+                                                </a>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                    <span>Dropbox</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                                    <span>Mail Chimp</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/slack.png" alt="slack">
+                                                    <span>Slack</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </a>
-
-                            <a
-                                href="https://laracasts.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M24 8.25a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v12a2.5 2.5 0 0 0 2.5 2.5h19a2.5 2.5 0 0 0 2.5-2.5v-12Zm-7.765 5.868a1.221 1.221 0 0 1 0 2.264l-6.626 2.776A1.153 1.153 0 0 1 8 18.123v-5.746a1.151 1.151 0 0 1 1.609-1.035l6.626 2.776ZM19.564 1.677a.25.25 0 0 0-.177-.427H15.6a.106.106 0 0 0-.072.03l-4.54 4.543a.25.25 0 0 0 .177.427h3.783c.027 0 .054-.01.073-.03l4.543-4.543ZM22.071 1.318a.047.047 0 0 0-.045.013l-4.492 4.492a.249.249 0 0 0 .038.385.25.25 0 0 0 .14.042h5.784a.5.5 0 0 0 .5-.5v-2a2.5 2.5 0 0 0-1.925-2.432ZM13.014 1.677a.25.25 0 0 0-.178-.427H9.101a.106.106 0 0 0-.073.03l-4.54 4.543a.25.25 0 0 0 .177.427H8.4a.106.106 0 0 0 .073-.03l4.54-4.543ZM6.513 1.677a.25.25 0 0 0-.177-.427H2.5A2.5 2.5 0 0 0 0 3.75v2a.5.5 0 0 0 .5.5h1.4a.106.106 0 0 0 .073-.03l4.54-4.543Z"/></g></svg>
+                            </div>
+    
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="bell-outline"></i>
+                                    <span class="noti-dot bg-danger rounded-pill">4</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                    aria-labelledby="page-header-notifications-dropdown">
+                                    <div class="p-3">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h5 class="m-0 font-size-15"> Notifications </h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#!" class="small fw-semibold text-decoration-underline"> Mark all as read</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-simplebar style="max-height: 250px;">
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">James Lemire</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">It will seem like simplified English.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hour ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 avatar-sm me-3">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="bx bx-cart"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Your order is placed</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 avatar-sm me-3">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="bx bx-badge-check"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Your item is shipped</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+    
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Salena Layfield</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hour ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 border-top d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                                            <i class="uil-arrow-circle-right me-1"></i> <span>View More..</span>
+                                        </a>
+                                    </div>
                                 </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laracasts</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <a
-                                href="https://laravel-news.com"
-                                class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
-                            >
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g fill="#FF2D20"><path d="M8.75 4.5H5.5c-.69 0-1.25.56-1.25 1.25v4.75c0 .69.56 1.25 1.25 1.25h3.25c.69 0 1.25-.56 1.25-1.25V5.75c0-.69-.56-1.25-1.25-1.25Z"/><path d="M24 10a3 3 0 0 0-3-3h-2V2.5a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2V20a3.5 3.5 0 0 0 3.5 3.5h17A3.5 3.5 0 0 0 24 20V10ZM3.5 21.5A1.5 1.5 0 0 1 2 20V3a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 .5.5v17c0 .295.037.588.11.874a.5.5 0 0 1-.484.625L3.5 21.5ZM22 20a1.5 1.5 0 1 1-3 0V9.5a.5.5 0 0 1 .5-.5H21a1 1 0 0 1 1 1v10Z"/><path d="M12.751 6.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 7.3v-.5a.75.75 0 0 1 .751-.753ZM12.751 10.047h2a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-2A.75.75 0 0 1 12 11.3v-.5a.75.75 0 0 1 .751-.753ZM4.751 14.047h10a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-10A.75.75 0 0 1 4 15.3v-.5a.75.75 0 0 1 .751-.753ZM4.75 18.047h7.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75h-7.5A.75.75 0 0 1 4 19.3v-.5a.75.75 0 0 1 .75-.753Z"/></g></svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                    </p>
-                                </div>
-
-                                <svg class="size-6 shrink-0 self-center stroke-[#FF2D20]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"/></svg>
-                            </a>
-
-                            <div class="flex items-start gap-4 rounded-lg bg-white p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]">
-                                <div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#FF2D20]/10 sm:size-16">
-                                    <svg class="size-5 sm:size-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                        <g fill="#FF2D20">
-                                            <path
-                                                d="M16.597 12.635a.247.247 0 0 0-.08-.237 2.234 2.234 0 0 1-.769-1.68c.001-.195.03-.39.084-.578a.25.25 0 0 0-.09-.267 8.8 8.8 0 0 0-4.826-1.66.25.25 0 0 0-.268.181 2.5 2.5 0 0 1-2.4 1.824.045.045 0 0 0-.045.037 12.255 12.255 0 0 0-.093 3.86.251.251 0 0 0 .208.214c2.22.366 4.367 1.08 6.362 2.118a.252.252 0 0 0 .32-.079 10.09 10.09 0 0 0 1.597-3.733ZM13.616 17.968a.25.25 0 0 0-.063-.407A19.697 19.697 0 0 0 8.91 15.98a.25.25 0 0 0-.287.325c.151.455.334.898.548 1.328.437.827.981 1.594 1.619 2.28a.249.249 0 0 0 .32.044 29.13 29.13 0 0 0 2.506-1.99ZM6.303 14.105a.25.25 0 0 0 .265-.274 13.048 13.048 0 0 1 .205-4.045.062.062 0 0 0-.022-.07 2.5 2.5 0 0 1-.777-.982.25.25 0 0 0-.271-.149 11 11 0 0 0-5.6 2.815.255.255 0 0 0-.075.163c-.008.135-.02.27-.02.406.002.8.084 1.598.246 2.381a.25.25 0 0 0 .303.193 19.924 19.924 0 0 1 5.746-.438ZM9.228 20.914a.25.25 0 0 0 .1-.393 11.53 11.53 0 0 1-1.5-2.22 12.238 12.238 0 0 1-.91-2.465.248.248 0 0 0-.22-.187 18.876 18.876 0 0 0-5.69.33.249.249 0 0 0-.179.336c.838 2.142 2.272 4 4.132 5.353a.254.254 0 0 0 .15.048c1.41-.01 2.807-.282 4.117-.802ZM18.93 12.957l-.005-.008a.25.25 0 0 0-.268-.082 2.21 2.21 0 0 1-.41.081.25.25 0 0 0-.217.2c-.582 2.66-2.127 5.35-5.75 7.843a.248.248 0 0 0-.09.299.25.25 0 0 0 .065.091 28.703 28.703 0 0 0 2.662 2.12.246.246 0 0 0 .209.037c2.579-.701 4.85-2.242 6.456-4.378a.25.25 0 0 0 .048-.189 13.51 13.51 0 0 0-2.7-6.014ZM5.702 7.058a.254.254 0 0 0 .2-.165A2.488 2.488 0 0 1 7.98 5.245a.093.093 0 0 0 .078-.062 19.734 19.734 0 0 1 3.055-4.74.25.25 0 0 0-.21-.41 12.009 12.009 0 0 0-10.4 8.558.25.25 0 0 0 .373.281 12.912 12.912 0 0 1 4.826-1.814ZM10.773 22.052a.25.25 0 0 0-.28-.046c-.758.356-1.55.635-2.365.833a.25.25 0 0 0-.022.48c1.252.43 2.568.65 3.893.65.1 0 .2 0 .3-.008a.25.25 0 0 0 .147-.444c-.526-.424-1.1-.917-1.673-1.465ZM18.744 8.436a.249.249 0 0 0 .15.228 2.246 2.246 0 0 1 1.352 2.054c0 .337-.08.67-.23.972a.25.25 0 0 0 .042.28l.007.009a15.016 15.016 0 0 1 2.52 4.6.25.25 0 0 0 .37.132.25.25 0 0 0 .096-.114c.623-1.464.944-3.039.945-4.63a12.005 12.005 0 0 0-5.78-10.258.25.25 0 0 0-.373.274c.547 2.109.85 4.274.901 6.453ZM9.61 5.38a.25.25 0 0 0 .08.31c.34.24.616.561.8.935a.25.25 0 0 0 .3.127.631.631 0 0 1 .206-.034c2.054.078 4.036.772 5.69 1.991a.251.251 0 0 0 .267.024c.046-.024.093-.047.141-.067a.25.25 0 0 0 .151-.23A29.98 29.98 0 0 0 15.957.764a.25.25 0 0 0-.16-.164 11.924 11.924 0 0 0-2.21-.518.252.252 0 0 0-.215.076A22.456 22.456 0 0 0 9.61 5.38Z"
-                                            />
-                                        </g>
-                                    </svg>
-                                </div>
-
-                                <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Vibrant Ecosystem</h2>
-
-                                    <p class="mt-4 text-sm/relaxed">
-                                        Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white dark:focus-visible:ring-[#FF2D20]">Forge</a>, <a href="https://vapor.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Vapor</a>, <a href="https://nova.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Nova</a>, <a href="https://envoyer.io" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Envoyer</a>, and <a href="https://herd.laravel.com" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Herd</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Echo</a>, <a href="https://laravel.com/docs/horizon" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="rounded-sm underline hover:text-black focus:outline-none focus-visible:ring-1 focus-visible:ring-[#FF2D20] dark:hover:text-white">Telescope</a>, and more.
-                                    </p>
+                            </div>
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item noti-icon right-bar-toggle" id="right-bar-toggle">
+                                    <i class="icon-sm" data-eva="settings-outline"></i>
+                                </button>
+                            </div>
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end pt-0">
+                                    <div class="p-3 border-bottom">
+                                        <h6 class="mb-0">Jennifer Bennett</h6>
+                                        <p class="mb-0 font-size-11 text-muted">jennifer.bennett@email.com</p>
+                                    </div>
+                                    <a class="dropdown-item" href="contacts-profile.html"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                                    <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
+                                    <a class="dropdown-item" href="pages-faqs.html"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Balance : <b>$6951.02</b></span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badge badge-soft-success ms-auto">New</span></a>
+                                    <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
+                                    <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
                                 </div>
                             </div>
                         </div>
-                    </main>
-
-                    <footer class="py-16 text-center text-sm text-black dark:text-white/70">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                    </div>
+                </header>
+                <!-- ========== Left Sidebar Start ========== -->
+                <div class="vertical-menu">
+    
+                    <!-- LOGO -->
+                    <div class="navbar-brand-box">
+                        <a href="index.html" class="logo logo-dark">
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                            </span>
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-dark.png" alt="" height="22">
+                            </span>
+                        </a>
+    
+                        <a href="index.html" class="logo logo-light">
+                            <span class="logo-lg">
+                                <img src="assets/images/logo-light.png" alt="" height="22">
+                            </span>
+                            <span class="logo-sm">
+                                <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                            </span>
+                        </a>
+                    </div>
+    
+                    <button type="button" class="btn btn-sm px-3 header-item vertical-menu-btn topnav-hamburger">
+                        <div class="hamburger-icon">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+    
+                    <div data-simplebar class="sidebar-menu-scroll">
+    
+                        <!--- Sidemenu -->
+                        <div id="sidebar-menu">
+                            <!-- Left Menu Start -->
+                            <ul class="metismenu list-unstyled" id="side-menu">
+                                <li class="menu-title" data-key="t-menu">Menu</li>
+    
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <i class="icon nav-icon" data-eva="grid-outline"></i>
+                                        <span class="menu-item" data-key="t-dashboards">Dashboards</span>
+                                        <span class="badge rounded-pill bg-primary">3</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="index.html" data-key="t-ecommerce">Ecommerce</a></li>
+                                        <li><a href="dashboard-saas.html" data-key="t-saas">Saas</a></li>
+                                        <li><a href="dashboard-crypto.html" data-key="t-crypto">Crypto</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li class="menu-title" data-key="t-applications">Applications</li>
+    
+                                <li>
+                                    <a href="apps-calendar.html">
+                                        <i class="icon nav-icon" data-eva="calendar-outline"></i>
+                                        <span class="menu-item" data-key="t-calendar">Calendar</span>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="apps-chat.html">
+                                        <i class="icon nav-icon" data-eva="message-circle-outline"></i>
+                                        <span class="menu-item" data-key="t-chat">Chat</span>
+                                        <span class="badge rounded-pill badge-soft-danger" data-key="t-hot">Hot</span>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="apps-file-manager.html">
+                                        <i class="icon nav-icon" data-eva="archive-outline"></i>
+                                        <span class="menu-item" data-key="t-filemanager">File Manager</span>
+                                    </a>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="shopping-bag-outline"></i>
+                                        <span class="menu-item" data-key="t-ecommerce">Ecommerce</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="ecommerce-products.html" data-key="t-products">Products</a></li>
+                                        <li><a href="ecommerce-product-detail.html" data-key="t-product-detail">Product Detail</a></li>
+                                        <li><a href="ecommerce-orders.html" data-key="t-orders">Orders</a></li>
+                                        <li><a href="ecommerce-customers.html" data-key="t-customers">Customers</a></li>
+                                        <li><a href="ecommerce-cart.html" data-key="t-cart">Cart</a></li>
+                                        <li><a href="ecommerce-checkout.html" data-key="t-checkout">Checkout</a></li>
+                                        <li><a href="ecommerce-shops.html" data-key="t-shops">Shops</a></li>
+                                        <li><a href="ecommerce-add-product.html" data-key="t-add-product">Add Product</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="email-outline"></i>
+                                        <span class="menu-item" data-key="t-email">Email</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="email-inbox.html" data-key="t-inbox">Inbox</a></li>
+                                        <li><a href="email-read.html" data-key="t-read-email">Read Email</a></li>
+                                        <li>
+                                            <a href="javascript: void(0);">
+                                                <span class="menu-item" data-key="t-email-templates">Templates</span>
+                                                <span class="badge rounded-pill badge-soft-success" data-key="t-new">New</span>
+                                            </a>
+                                            <ul class="sub-menu" aria-expanded="true">
+                                                <li><a href="email-template-basic.html" data-key="t-basic-action">Basic Action</a></li>
+                                                <li><a href="email-template-alert.html" data-key="t-alert-email">Alert Email</a></li>
+                                                <li><a href="email-template-billing.html" data-key="t-bill-email">Billing Email</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="book-outline"></i>
+                                        <span class="menu-item" data-key="t-invoices">Invoices</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="invoices-list.html" data-key="t-invoice-list">Invoice List</a></li>
+                                        <li><a href="invoices-detail.html" data-key="t-invoice-detail">Invoice Detail</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="briefcase-outline"></i>
+                                        <span class="menu-item" data-key="t-projects">Projects</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="projects-grid.html" data-key="t-p-grid">Projects Grid</a></li>
+                                        <li><a href="projects-list.html" data-key="t-p-list">Projects List</a></li>
+                                        <li><a href="projects-create.html" data-key="t-create-new">Create New</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="wifi-outline"></i>
+                                        <span class="menu-item" data-key="t-contacts">Contacts</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="contacts-grid.html" data-key="t-user-grid">User Grid</a></li>
+                                        <li><a href="contacts-list.html" data-key="t-user-list">User List</a></li>
+                                        <li><a href="contacts-profile.html" data-key="t-user-profile">Profile</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li class="menu-title" data-key="t-layouts">Layouts</li>
+                    
+                                <li>
+                                    <a href="layouts-horizontal.html">
+                                        <i class="icon nav-icon" data-eva="browser-outline"></i>
+                                        <span class="menu-item" data-key="t-horizontal">Horizontal</span>
+                                    </a>
+                                </li>
+    
+                                <li class="menu-title" data-key="t-pages">Pages</li>
+    
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <i class="icon nav-icon" data-eva="person-done-outline"></i>
+                                        <span class="menu-item" data-key="t-authentication">Authentication</span>
+                                        <span class="badge rounded-pill bg-info">8</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="auth-login.html" data-key="t-login">Login</a></li>
+                                        <li><a href="auth-register.html" data-key="t-register">Register</a></li>
+                                        <li><a href="auth-recoverpw.html" data-key="t-recover-password">Recover Password</a></li>
+                                        <li><a href="auth-lock-screen.html" data-key="t-lock-screen">Lock Screen</a></li>
+                                        <li><a href="auth-logout.html" data-key="t-logout">Logout</a></li>
+                                        <li><a href="auth-confirm-mail.html" data-key="t-confirm-mail">Confirm Mail</a></li>
+                                        <li><a href="auth-email-verification.html" data-key="t-email-verification">Email Verification</a></li>
+                                        <li><a href="auth-two-step-verification.html" data-key="t-two-step-verification">Two Step Verification</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="cube-outline"></i>
+                                        <span class="menu-item" data-key="t-utility">Utility</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="pages-starter.html" data-key="t-starter-page">Starter Page</a></li>
+                                        <li><a href="pages-maintenance.html" data-key="t-maintenance">Maintenance</a></li>
+                                        <li><a href="pages-comingsoon.html" data-key="t-coming-soon">Coming Soon</a></li>
+                                        <li><a href="pages-timeline.html" data-key="t-timeline">Timeline</a></li>
+                                        <li><a href="pages-faqs.html" data-key="t-faqs">FAQs</a></li>
+                                        <li><a href="pages-pricing.html" data-key="t-pricing">Pricing</a></li>
+                                        <li><a href="pages-404.html" data-key="t-error-404">Error 404</a></li>
+                                        <li><a href="pages-500.html" data-key="t-error-500">Error 500</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li class="menu-title" data-key="t-components">Components</li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="layers-outline"></i>
+                                        <span class="menu-item" data-key="t-ui-elements">UI Elements</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="ui-alerts.html" data-key="t-alerts">Alerts</a></li>
+                                        <li><a href="ui-buttons.html" data-key="t-buttons">Buttons</a></li>
+                                        <li><a href="ui-cards.html" data-key="t-cards">Cards</a></li>
+                                        <li><a href="ui-carousel.html" data-key="t-carousel">Carousel</a></li>
+                                        <li><a href="ui-dropdowns.html" data-key="t-dropdowns">Dropdowns</a></li>
+                                        <li><a href="ui-grid.html" data-key="t-grid">Grid</a></li>
+                                        <li><a href="ui-images.html" data-key="t-images">Images</a></li>
+                                        <li><a href="ui-lightbox.html" data-key="t-lightbox">Lightbox</a></li>
+                                        <li><a href="ui-modals.html" data-key="t-modals">Modals</a></li>
+                                        <li><a href="ui-offcanvas.html" data-key="t-offcanvas">Offcanvas</a></li>
+                                        <li><a href="ui-rangeslider.html" data-key="t-range-slider">Range Slider</a></li>
+                                        <li><a href="ui-progressbars.html" data-key="t-progress-bars">Progress Bars</a></li>
+                                        <li><a href="ui-sweet-alert.html" data-key="t-sweet-alert">Sweet-Alert</a></li>
+                                        <li><a href="ui-tabs-accordions.html" data-key="t-tabs-accordions">Tabs & Accordions</a></li>
+                                        <li><a href="ui-typography.html" data-key="t-typography">Typography</a></li>
+                                        <li><a href="ui-video.html" data-key="t-video">Video</a></li>
+                                        <li><a href="ui-general.html" data-key="t-general">General</a></li>
+                                        <li><a href="ui-colors.html" data-key="t-colors">Colors</a></li>
+                                        <li><a href="ui-rating.html" data-key="t-rating">Rating</a></li>
+                                        <li><a href="ui-notifications.html" data-key="t-notifications">Notifications</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="edit-2-outline"></i>
+                                        <span class="menu-item" data-key="t-forms">Forms</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="form-elements.html" data-key="t-form-elements">Form Elements</a></li>
+                                        <li><a href="form-layouts.html" data-key="t-form-layouts">Form Layouts</a></li>
+                                        <li><a href="form-validation.html" data-key="t-form-validation">Form Validation</a></li>
+                                        <li><a href="form-advanced.html" data-key="t-form-advanced">Form Advanced</a></li>
+                                        <li><a href="form-editors.html" data-key="t-form-editors">Form Editors</a></li>
+                                        <li><a href="form-uploads.html" data-key="t-form-upload">Form File Upload</a></li>
+                                        <li><a href="form-wizard.html" data-key="t-form-wizard">Form Wizard</a></li>
+                                        <li><a href="form-mask.html" data-key="t-form-mask">Form Mask</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="list"></i>
+                                        <span class="menu-item" data-key="t-tables">Tables</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="tables-basic.html" data-key="t-basic-tables">Basic Tables</a></li>
+                                        <li><a href="tables-advanced.html" data-key="t-advanced-tables">Advance Tables</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="pie-chart-outline"></i>
+                                        <span class="menu-item" data-key="t-charts">Charts</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="javascript: void(0);" class="has-arrow" data-key="t-apex-charts">Apex Charts</a>
+                                            <ul class="sub-menu" aria-expanded="true">
+                                                <li><a href="charts-line.html" data-key="t-line">Line</a></li>
+                                                <li><a href="charts-area.html" data-key="t-area">Area</a></li>
+                                                <li><a href="charts-column.html" data-key="t-column">Column</a></li>
+                                                <li><a href="charts-bar.html" data-key="t-bar">Bar</a></li>
+                                                <li><a href="charts-mixed.html" data-key="t-mixed">Mixed</a></li>
+                                                <li><a href="charts-timeline.html" data-key="t-timeline">Timeline</a></li>
+                                                <li><a href="charts-candlestick.html" data-key="t-candlestick">Candlestick</a></li>
+                                                <li><a href="charts-boxplot.html" data-key="t-boxplot">Boxplot</a></li>
+                                                <li><a href="charts-bubble.html" data-key="t-bubble">Bubble</a></li>
+                                                <li><a href="charts-scatter.html" data-key="t-scatter">Scatter</a></li>
+                                                <li><a href="charts-heatmap.html" data-key="t-heatmap">Heatmap</a></li>
+                                                <li><a href="charts-treemap.html" data-key="t-treemap">Treemap</a></li>
+                                                <li><a href="charts-pie.html" data-key="t-pie">Pie</a></li>
+                                                <li><a href="charts-radialbar.html" data-key="t-radialbar">Radialbar</a></li>
+                                                <li><a href="charts-radar.html" data-key="t-radar">Radar</a></li>
+                                                <li><a href="charts-polararea.html" data-key="t-polararea">Polararea</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="charts-echart.html" data-key="t-e-charts">E Charts</a></li>
+                                        <li><a href="charts-chartjs.html" data-key="t-chartjs-charts">Chartjs Charts</a></li>
+                                        <li><a href="charts-tui.html" data-key="t-ui-charts">Toast UI Charts</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="smiling-face-outline"></i>
+                                        <span class="menu-item" data-key="t-icons">Icons</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="icons-evaicons.html" data-key="t-evaicons">Eva Icons</a></li>
+                                        <li><a href="icons-boxicons.html" data-key="t-boxicons">Boxicons</a></li>
+                                        <li><a href="icons-materialdesign.html" data-key="t-material-design">Material Design</a></li>
+                                        <li><a href="icons-fontawesome.html" data-key="t-font-awesome">Font Awesome 5</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="pin-outline"></i>
+                                        <span class="menu-item" data-key="t-maps">Maps</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="false">
+                                        <li><a href="maps-google.html" data-key="t-google">Google</a></li>
+                                        <li><a href="maps-vector.html" data-key="t-vector">Vector</a></li>
+                                        <li><a href="maps-leaflet.html" data-key="t-leaflet">Leaflet</a></li>
+                                    </ul>
+                                </li>
+    
+                                <li>
+                                    <a href="javascript: void(0);" class="has-arrow">
+                                        <i class="icon nav-icon" data-eva="share-outline"></i>
+                                        <span class="menu-item" data-key="t-multi-level">Multi Level</span>
+                                    </a>
+                                    <ul class="sub-menu" aria-expanded="true">
+                                        <li><a href="javascript: void(0);" data-key="t-level-1.1">Level 1.1</a></li>
+                                        <li><a href="javascript: void(0);" class="has-arrow" data-key="t-level-1.2">Level 1.2</a>
+                                            <ul class="sub-menu" aria-expanded="true">
+                                                <li><a href="javascript: void(0);" data-key="t-level-2.1">Level 2.1</a></li>
+                                                <li><a href="javascript: void(0);" data-key="t-level-2.2">Level 2.2</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                            </ul>
+                        </div>
+                        <!-- Sidebar -->
+    
+                        <div class="p-3 px-4 sidebar-footer">
+                            <p class="mb-1 main-title"><script>document.write(new Date().getFullYear())</script> &copy; Borex.</p>
+                            <p class="mb-0">Design & Develop by Themesbrand</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Left Sidebar End -->
+                <header id="page-topbar" class="ishorizontal-topbar">
+                    <div class="navbar-header">
+                        <div class="d-flex">
+                            <!-- LOGO -->
+                            <div class="navbar-brand-box">
+                                <a href="index.html" class="logo logo-dark">
+                                    <span class="logo-sm">
+                                        <img src="assets/images/logo-dark-sm.png" alt="" height="22">
+                                    </span>
+                                    <span class="logo-lg">
+                                        <img src="assets/images/logo-dark.png" alt="" height="22">
+                                    </span>
+                                </a>
+    
+                                <a href="index.html" class="logo logo-light">
+                                    <span class="logo-sm">
+                                        <img src="assets/images/logo-light-sm.png" alt="" height="22">
+                                    </span>
+                                    <span class="logo-lg">
+                                        <img src="assets/images/logo-light.png" alt="" height="22">
+                                    </span>
+                                </a>
+                            </div>
+    
+                            <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                                <i class="fa fa-fw fa-bars"></i>
+                            </button>
+    
+                            <div class="d-none d-sm-block ms-2 align-self-center">
+                                <h4 class="page-title">Dashboard</h4>
+                            </div>
+                        </div>
+    
+                        <div class="d-flex">
+                            <div class="dropdown">
+                                <button type="button" class="btn header-item"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="search-outline"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-md p-0">
+                                    <form class="p-2">
+                                        <div class="search-box">
+                                            <div class="position-relative">
+                                                <input type="text" class="form-control bg-light border-0" placeholder="Search...">
+                                                <i class="search-icon" data-eva="search-outline" data-eva-height="26" data-eva-width="26"></i>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-inline-block language-switch">
+                                <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="header-lang-img" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
+                                        <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">English</span>
+                                    </a>
+                        
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
+                                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Spanish</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
+                                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">German</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
+                                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Italian</span>
+                                    </a>
+    
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
+                                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> <span class="align-middle">Russian</span>
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-none d-lg-inline-block">
+                                <button type="button" class="btn header-item noti-icon"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="grid-outline"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+                                    <div class="p-3">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h5 class="m-0 font-size-15"> Web Apps </h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#!" class="small fw-semibold text-decoration-underline"> View All</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-lg-2 pb-2">
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/github.png" alt="Github">
+                                                    <span>GitHub</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/bitbucket.png" alt="bitbucket">
+                                                    <span>Bitbucket</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/dribbble.png" alt="dribbble">
+                                                    <span>Dribbble</span>
+                                                </a>
+                                            </div>
+                                        </div>
+    
+                                        <div class="row g-0">
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/dropbox.png" alt="dropbox">
+                                                    <span>Dropbox</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/mail_chimp.png" alt="mail_chimp">
+                                                    <span>Mail Chimp</span>
+                                                </a>
+                                            </div>
+                                            <div class="col">
+                                                <a class="dropdown-icon-item" href="#!">
+                                                    <img src="assets/images/brands/slack.png" alt="slack">
+                                                    <span>Slack</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="icon-sm" data-eva="bell-outline"></i>
+                                    <span class="noti-dot bg-danger rounded-pill">4</span>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0"
+                                    aria-labelledby="page-header-notifications-dropdown">
+                                    <div class="p-3">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h5 class="m-0 font-size-15"> Notifications </h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <a href="#!" class="small fw-semibold text-decoration-underline"> Mark all as read</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div data-simplebar style="max-height: 250px;">
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <img src="assets/images/users/avatar-3.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">James Lemire</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">It will seem like simplified English.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 avatar-sm me-3">
+                                                    <span class="avatar-title bg-primary rounded-circle font-size-16">
+                                                        <i class="bx bx-cart"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Your order is placed</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 avatar-sm me-3">
+                                                    <span class="avatar-title bg-success rounded-circle font-size-16">
+                                                        <i class="bx bx-badge-check"></i>
+                                                    </span>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Your item is shipped</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">If several languages coalesce the grammar</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>3 min ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+    
+                                        <a href="#!" class="text-reset notification-item">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <img src="assets/images/users/avatar-6.jpg" class="rounded-circle avatar-sm" alt="user-pic">
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <h6 class="mb-1">Salena Layfield</h6>
+                                                    <div class="font-size-13 text-muted">
+                                                        <p class="mb-1">As a skeptical Cambridge friend of mine occidental.</p>
+                                                        <p class="mb-0"><i class="mdi mdi-clock-outline"></i> <span>1 hours ago</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="p-2 border-top d-grid">
+                                        <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
+                                            <i class="uil-arrow-circle-right me-1"></i> <span>View More..</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item noti-icon right-bar-toggle" id="right-bar-toggle">
+                                    <i class="icon-sm" data-eva="settings-outline"></i>
+                                </button>
+                            </div>
+    
+                            <div class="dropdown d-inline-block">
+                                <button type="button" class="btn header-item user text-start d-flex align-items-center" id="page-header-user-dropdown"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="rounded-circle header-profile-user" src="assets/images/users/avatar-1.jpg"
+                                    alt="Header Avatar">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end pt-0">
+                                    <div class="p-3 border-bottom">
+                                        <h6 class="mb-0">Jennifer Bennett</h6>
+                                        <p class="mb-0 font-size-11 text-muted">jennifer.bennett@email.com</p>
+                                    </div>
+                                    <a class="dropdown-item" href="contacts-profile.html"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                                    <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
+                                    <a class="dropdown-item" href="pages-faqs.html"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Balance : <b>$6951.02</b></span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badge badge-soft-success ms-auto">New</span></a>
+                                    <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
+                                    <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="topnav">
+                        <div class="container-fluid">
+                            <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+        
+                                <div class="collapse navbar-collapse" id="topnav-menu-content">
+                                    <ul class="navbar-nav">
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="icon nav-icon" data-eva="grid-outline"></i>
+                                                <span data-key="t-dashboards">Dashboards</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
+                                               <a href="index.html" class="dropdown-item" data-key="t-ecommerce">Ecommerce</a>
+                                               <a href="dashboard-saas.html" class="dropdown-item" data-key="t-saas">Saas</a>
+                                               <a href="dashboard-crypto.html" class="dropdown-item" data-key="t-crypto">Crypto</a>
+                                            </div>
+                                        </li>
+        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-uielement" role="button"
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="icon nav-icon" data-eva="cube-outline"></i>
+                                               <span data-key="t-elements">Elements</span> <div class="arrow-down"></div>
+                                            </a>
+    
+                                            <div class="dropdown-menu mega-dropdown-menu px-2 dropdown-mega-menu-xl" aria-labelledby="topnav-uielement">
+                                                <div class="ps-2 p-lg-0">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div>
+                                                                <div class="menu-title">Elements</div>
+                                                                <div class="row g-0">
+                                                                    <div class="col-lg-4">
+                                                                        <div>
+                                                                            <a href="ui-alerts.html" class="dropdown-item" data-key="t-alerts">Alerts</a>
+                                                                            <a href="ui-buttons.html" class="dropdown-item" data-key="t-buttons">Buttons</a>
+                                                                            <a href="ui-cards.html" class="dropdown-item" data-key="t-cards">Cards</a>
+                                                                            <a href="ui-carousel.html" class="dropdown-item" data-key="t-carousel">Carousel</a>
+                                                                            <a href="ui-dropdowns.html" class="dropdown-item" data-key="t-dropdowns">Dropdowns</a>
+                                                                            <a href="ui-grid.html" class="dropdown-item" data-key="t-grid">Grid</a>
+                                                                            <a href="ui-images.html" class="dropdown-item" data-key="t-images">Images</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <div>
+                                                                            <a href="ui-lightbox.html" class="dropdown-item" data-key="t-lightbox">Lightbox</a>
+                                                                            <a href="ui-modals.html" class="dropdown-item" data-key="t-modals">Modals</a>
+                                                                            <a href="ui-offcanvas.html" class="dropdown-item" data-key="t-offcanvas">Offcanvas</a>
+                                                                            <a href="ui-rangeslider.html" class="dropdown-item" data-key="t-range-slider">Range Slider</a>
+                                                                            <a href="ui-progressbars.html" class="dropdown-item" data-key="t-progress-bars">Progress Bars</a>
+                                                                            <a href="ui-sweet-alert.html" class="dropdown-item" data-key="t-sweet-alert">Sweet-Alert</a>
+                                                                            <a href="ui-tabs-accordions.html" class="dropdown-item" data-key="t-tabs-accordions">Tabs & Accordions</a>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-4">
+                                                                        <div>
+                                                                            <a href="ui-typography.html" class="dropdown-item" data-key="t-typography">Typography</a>
+                                                                            <a href="ui-video.html" class="dropdown-item" data-key="t-video">Video</a>
+                                                                            <a href="ui-general.html" class="dropdown-item" data-key="t-general">General</a>
+                                                                            <a href="ui-colors.html" class="dropdown-item" data-key="t-colors">Colors</a>
+                                                                            <a href="ui-rating.html" class="dropdown-item" data-key="t-rating">Rating</a>
+                                                                            <a href="ui-notifications.html" class="dropdown-item" data-key="t-notifications">Notifications</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button">
+                                                <i class="icon nav-icon" data-eva="archive-outline"></i>
+                                                <span data-key="t-apps">Apps</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-pages">
+    
+                                                <a href="apps-calendar.html" class="dropdown-item" data-key="t-calendar">Calendar</a>
+                                                <a href="apps-chat.html" class="dropdown-item" data-key="t-chat">Chat</a>
+                                                <a href="apps-file-manager.html" class="dropdown-item" data-key="t-filemanager">File Manager</a>
+    
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-ecommerce"
+                                                        role="button">
+                                                        <span data-key="t-ecommerce">Ecommerce</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-ecommerce">
+                                                        <a href="ecommerce-products.html" class="dropdown-item" data-key="t-products">Products</a>
+                                                        <a href="ecommerce-product-detail.html" class="dropdown-item" data-key="t-product-detail">Product Detail</a>
+                                                        <a href="ecommerce-orders.html" class="dropdown-item" data-key="t-orders">Orders</a>
+                                                        <a href="ecommerce-customers.html" class="dropdown-item" data-key="t-customers">Customers</a>
+                                                        <a href="ecommerce-cart.html" class="dropdown-item" data-key="t-cart">Cart</a>
+                                                        <a href="ecommerce-checkout.html" class="dropdown-item" data-key="t-checkout">Checkout</a>
+                                                        <a href="ecommerce-shops.html" class="dropdown-item" data-key="t-shops">Shops</a>
+                                                        <a href="ecommerce-add-product.html" class="dropdown-item" data-key="t-add-product">Add Product</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email"
+                                                        role="button">
+                                                        <span data-key="t-email">Email</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-auth">
+                                                        <a href="email-inbox.html" class="dropdown-item" data-key="t-inbox">Inbox</a>
+                                                        <a href="email-read.html" class="dropdown-item" data-key="t-read-email">Read Email</a>
+                                                        <div class="dropdown">
+                                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-email-templates" role="button">
+                                                                <span data-key="t-email-templates">Templates</span> <div class="arrow-down"></div>
+                                                            </a>
+                                                            <div class="dropdown-menu" aria-labelledby="topnav-email-templates">
+                                                                <a href="email-template-basic.html" class="dropdown-item" data-key="t-basic-action">Basic Action</a>
+                                                                <a href="email-template-alert.html" class="dropdown-item" data-key="t-alert-email">Alert Email</a>
+                                                                <a href="email-template-billing.html" class="dropdown-item" data-key="t-bill-email">Billing Email</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-invoices"
+                                                        role="button">
+                                                       <span data-key="t-invoices">Invoices</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-invoices">
+                                                        <a href="invoices-list.html" class="dropdown-item" data-key="t-invoice-list">Invoice List</a>
+                                                        <a href="invoices-detail.html" class="dropdown-item" data-key="t-invoice-detail">Invoice Detail</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-projects"
+                                                        role="button">
+                                                       <span data-key="t-projects">Projects</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-projects">
+                                                       <a href="projects-grid.html" class="dropdown-item" data-key="t-p-grid">Projects Grid</a>
+                                                       <a href="projects-list.html" class="dropdown-item" data-key="t-p-list">Projects List</a>
+                                                       <a href="projects-create.html" class="dropdown-item" data-key="t-create-new">Create New</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-contact"
+                                                        role="button">
+                                                       <span data-key="t-contacts">Contacts</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-contact">
+                                                        <a href="contacts-grid.html" class="dropdown-item" data-key="t-user-grid">User Grid</a>
+                                                        <a href="contacts-list.html" class="dropdown-item" data-key="t-user-list">User List</a>
+                                                        <a href="contacts-profile.html" class="dropdown-item" data-key="t-user-profile">Profile</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-components" role="button">
+                                                <i class="icon nav-icon" data-eva="layers-outline"></i>
+                                                <span data-key="t-components">Components</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-components">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-form"
+                                                        role="button">
+                                                        <span data-key="t-forms">Forms</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-form">
+                                                        <a href="form-elements.html" class="dropdown-item" data-key="t-form-elements">Form Elements</a>
+                                                        <a href="form-layouts.html" class="dropdown-item" data-key="t-form-layouts">Form Layouts</a>
+                                                        <a href="form-validation.html" class="dropdown-item" data-key="t-form-validation">Form Validation</a>
+                                                        <a href="form-advanced.html" class="dropdown-item" data-key="t-form-advanced">Form Advanced</a>
+                                                        <a href="form-editors.html" class="dropdown-item" data-key="t-form-editors">Form Editors</a>
+                                                        <a href="form-uploads.html" class="dropdown-item" data-key="t-form-upload">Form File Upload</a>
+                                                        <a href="form-wizard.html" class="dropdown-item" data-key="t-form-wizard">Form Wizard</a>
+                                                        <a href="form-mask.html" class="dropdown-item" data-key="t-form-mask">Form Mask</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-table"
+                                                        role="button">
+                                                        <span data-key="t-tables">Tables</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-table">
+                                                        <a href="tables-basic.html" class="dropdown-item" data-key="t-basic-tables">Basic Tables</a>
+                                                        <a href="tables-advanced.html" class="dropdown-item" data-key="t-advanced-tables">Advance Tables</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-charts"
+                                                        role="button">
+                                                        <span data-key="t-charts">Charts</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                                        <div class="dropdown">
+                                                            <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-charts"
+                                                                role="button">
+                                                                <span data-key="t-apex-charts">Apex Charts</span> <div class="arrow-down"></div>
+                                                            </a>
+                                                            <div class="dropdown-menu" aria-labelledby="topnav-charts">
+                                                                <a href="charts-line.html" class="dropdown-item" data-key="t-line">Line</a>
+                                                                <a href="charts-area.html" class="dropdown-item" data-key="t-area">Area</a>
+                                                                <a href="charts-column.html" class="dropdown-item" data-key="t-column">Column</a>
+                                                                <a href="charts-bar.html" class="dropdown-item" data-key="t-bar">Bar</a>
+                                                                <a href="charts-mixed.html" class="dropdown-item" data-key="t-mixed">Mixed</a>
+                                                                <a href="charts-timeline.html" class="dropdown-item" data-key="t-timeline">Timeline</a>
+                                                                <a href="charts-candlestick.html" class="dropdown-item" data-key="t-candlestick">Candlestick</a>
+                                                                <a href="charts-boxplot.html" class="dropdown-item" data-key="t-boxplot">Boxplot</a>
+                                                                <a href="charts-bubble.html" class="dropdown-item" data-key="t-bubble">Bubble</a>
+                                                                <a href="charts-scatter.html" class="dropdown-item" data-key="t-scatter">Scatter</a>
+                                                                <a href="charts-heatmap.html" class="dropdown-item" data-key="t-heatmap">Heatmap</a>
+                                                                <a href="charts-treemap.html" class="dropdown-item" data-key="t-treemap">Treemap</a>
+                                                                <a href="charts-pie.html" class="dropdown-item" data-key="t-pie">Pie</a>
+                                                                <a href="charts-radialbar.html" class="dropdown-item" data-key="t-radialbar">Radialbar</a>
+                                                                <a href="charts-radar.html" class="dropdown-item" data-key="t-radar">Radar</a>
+                                                                <a href="charts-polararea.html" class="dropdown-item" data-key="t-polararea">Polararea</a>
+                                                            </div>
+                                                        </div>
+                                                        <a href="charts-echart.html" class="dropdown-item" data-key="t-e-charts">E Charts</a>
+                                                        <a href="charts-chartjs.html" class="dropdown-item" data-key="t-chartjs-charts">Chartjs Charts</a>
+                                                        <a href="charts-tui.html" class="dropdown-item" data-key="t-ui-charts">Toast UI Charts</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-icons"
+                                                        role="button">
+                                                        <span data-key="t-icons">Icons</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-icons">
+                                                        <a href="icons-evaicons.html" class="dropdown-item" data-key="t-evaicons">Eva Icons</a>
+                                                        <a href="icons-boxicons.html" class="dropdown-item" data-key="t-boxicons">Boxicons</a>
+                                                        <a href="icons-materialdesign.html" class="dropdown-item" data-key="t-material-design">Material Design</a>
+                                                        <a href="icons-fontawesome.html" class="dropdown-item" data-key="t-font-awesome">Font Awesome 5</a>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-map"
+                                                        role="button">
+                                                        <span data-key="t-maps">Maps</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-map">
+                                                        <a href="maps-google.html" class="dropdown-item" data-key="t-google">Google</a>
+                                                        <a href="maps-vector.html" class="dropdown-item" data-key="t-vector">Vector</a>
+                                                        <a href="maps-leaflet.html" class="dropdown-item" data-key="t-leaflet">Leaflet</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+        
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more" role="button">
+                                                <i class="icon nav-icon" data-eva="file-text-outline"></i>
+                                                <span data-key="t-pages">Pages</span> <div class="arrow-down"></div>
+                                            </a>
+                                            <div class="dropdown-menu" aria-labelledby="topnav-more">
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-authentication"
+                                                        role="button">
+                                                        <span data-key="t-authentication">Authentication</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-authentication">
+                                                        <a href="auth-login.html" class="dropdown-item" data-key="t-login">Login</a>
+                                                        <a href="auth-register.html" class="dropdown-item" data-key="t-register">Register</a>
+                                                        <a href="auth-recoverpw.html" class="dropdown-item" data-key="t-recover-password">Recover Password</a>
+                                                        <a href="auth-lock-screen.html" class="dropdown-item" data-key="t-lock-screen">Lock Screen</a>
+                                                        <a href="auth-logout.html" class="dropdown-item" data-key="t-logout">Logout</a>
+                                                        <a href="auth-confirm-mail.html" class="dropdown-item" data-key="t-confirm-mail">Confirm Mail</a>
+                                                        <a href="auth-email-verification.html" class="dropdown-item" data-key="t-email-verification">Email Verification</a>
+                                                        <a href="auth-two-step-verification.html" class="dropdown-item" data-key="t-two-step-verification">Two Step Verification</a>
+                                                    </div>
+                                                </div>
+    
+                                                <div class="dropdown">
+                                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#" id="topnav-utility"
+                                                        role="button">
+                                                        <span data-key="t-utility">Utility</span> <div class="arrow-down"></div>
+                                                    </a>
+                                                    <div class="dropdown-menu" aria-labelledby="topnav-utility">
+                                                        <a href="pages-starter.html" class="dropdown-item" data-key="t-starter-page">Starter Page</a>
+                                                        <a href="pages-maintenance.html" class="dropdown-item" data-key="t-maintenance">Maintenance</a>
+                                                        <a href="pages-comingsoon.html" class="dropdown-item" data-key="t-coming-soon">Coming Soon</a>
+                                                        <a href="pages-timeline.html" class="dropdown-item" data-key="t-timeline">Timeline</a>
+                                                        <a href="pages-faqs.html" class="dropdown-item" data-key="t-faqs">FAQs</a>
+                                                        <a href="pages-pricing.html" class="dropdown-item" data-key="t-pricing">Pricing</a>
+                                                        <a href="pages-404.html" class="dropdown-item" data-key="t-error-404">Error 404</a>
+                                                        <a href="pages-500.html" class="dropdown-item" data-key="t-error-500">Error 500</a>
+                                                    </div>
+                                                </div>
+    
+                                                <a href="layouts-horizontal.html" class="dropdown-item" data-key="t-horizontal">Horizontal</a>
+                                            </div>
+                                        </li>
+        
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
+    
+                <!-- ============================================================== -->
+                <!-- Start right Content here -->
+                <!-- ============================================================== -->
+                <div class="main-content">
+                    <div class="page-content">
+                        <div class="container-fluid">
+    
+                            <div class="row">
+                                <div class="col-xxl-9">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar">
+                                                                <div class="avatar-title rounded bg-primary bg-gradient">
+                                                                    <i data-eva="pie-chart-2" class="fill-white"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <p class="text-muted mb-1">Revenue</p>
+                                                            <h4 class="mb-0">$21,456</h4>
+                                                        </div>
+    
+                                                        <div class="flex-shrink-0 align-self-end ms-2">
+                                                            <div class="badge rounded-pill font-size-13 badge-soft-success">+ 2.65%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-xl-4 col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar">
+                                                                <div class="avatar-title rounded bg-primary bg-gradient">
+                                                                    <i data-eva="shopping-bag" class="fill-white"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <p class="text-muted mb-1">Orders</p>
+                                                            <h4 class="mb-0">5,643</h4>
+                                                        </div>
+                                                        <div class="flex-shrink-0 align-self-end ms-2">
+                                                            <div class="badge rounded-pill font-size-13 badge-soft-danger">- 0.82%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+                                        <div class="col-xl-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="flex-shrink-0 me-3">
+                                                            <div class="avatar">
+                                                                <div class="avatar-title rounded bg-primary bg-gradient">
+                                                                    <i data-eva="people" class="fill-white"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                            <p class="text-muted mb-1">Customers</p>
+                                                            <h4 class="mb-0">45,254</h4>
+                                                        </div>
+                                                        <div class="flex-shrink-0 align-self-end ms-2">
+                                                            <div class="badge rounded-pill font-size-13 badge-soft-danger">- 1.04%
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+    
+                                    <div class="card">
+                                        <div class="card-body pb-0">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="card-title mb-3">Overview</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div class="dropdown">
+                                                        <a class="dropdown-toggle text-reset" href="#" data-bs-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                            <span class="fw-semibold">Sort By:</span> <span
+                                                                class="text-muted">Yearly<i
+                                                                    class="mdi mdi-chevron-down ms-1"></i></span>
+                                                        </a>
+    
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Yearly</a>
+                                                            <a class="dropdown-item" href="#">Monthly</a>
+                                                            <a class="dropdown-item" href="#">Weekly</a>
+                                                            <a class="dropdown-item" href="#">Today</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="row gy-4">
+                                                <div class="col-xxl-3">
+                                                    <div>
+                                                        <div class="mt-3 mb-3">
+                                                            <p class="text-muted mb-1">This Month</p>
+    
+                                                            <div class="d-flex flex-wrap align-items-center gap-2">
+                                                                <h2 class="mb-0">$24,568</h2>
+                                                                <div class="badge rounded-pill font-size-13 badge-soft-success">+
+                                                                    2.65%</div>
+                                                            </div>
+                                                        </div>
+    
+                                                        <div class="row g-0">
+                                                            <div class="col-sm-6">
+                                                                <div class="border-bottom border-end p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Orders</p>
+                                                                    <h5 class="text-truncate mb-0">5,643</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="border-bottom p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Sales</p>
+                                                                    <h5 class="text-truncate mb-0">16,273</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-0">
+                                                            <div class="col-sm-6">
+                                                                <div class="border-bottom border-end p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Order Value</p>
+                                                                    <h5 class="text-truncate mb-0">12.03 %</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="border-bottom p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Customers</p>
+                                                                    <h5 class="text-truncate mb-0">21,456</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row g-0">
+                                                            <div class="col-sm-6">
+                                                                <div class="border-end p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Income</p>
+                                                                    <h5 class="text-truncate mb-0">$35,652</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <div class="p-3 h-100">
+                                                                    <p class="text-muted text-truncate mb-1">Expenses</p>
+                                                                    <h5 class="text-truncate mb-0">$12,248</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-9">
+                                                    <div>
+                                                        <div id="chart-column" class="apex-charts" data-colors='["#f1f3f7", "#3b76e1"]'></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end card body -->
+                                    </div>
+                                    <!-- end card -->
+    
+                                    <div class="row">
+                                        <div class="col-xl-4">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="card-title mb-3">User Activity</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="dropdown">
+                                                                <a class="dropdown-toggle text-muted" href="#"
+                                                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false">
+                                                                    Weekly<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                                </a>
+    
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">Yearly</a>
+                                                                    <a class="dropdown-item" href="#">Monthly</a>
+                                                                    <a class="dropdown-item" href="#">Weekly</a>
+                                                                    <a class="dropdown-item" href="#">Today</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div>
+                                                        <p class="text-muted mb-1">This Month</p>
+                                                        <h4>16,543</h4>
+                                                    </div>
+    
+                                                    <div class="m-n3">
+                                                        <div id="chart-area" data-colors='["#3b76e1", "#f56e6e"]' class="apex-charts"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+    
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="card-title mb-3">Order Stats</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="dropdown">
+                                                                <a class="dropdown-toggle text-muted" href="#"
+                                                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false">
+                                                                    <i data-eva="more-horizontal-outline" class="fill-muted"
+                                                                        data-eva-height="18" data-eva-width="18"></i>
+                                                                </a>
+    
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">Yearly</a>
+                                                                    <a class="dropdown-item" href="#">Monthly</a>
+                                                                    <a class="dropdown-item" href="#">Weekly</a>
+                                                                    <a class="dropdown-item" href="#">Today</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div id="chart-donut" data-colors='["#3b76e1", "#f1f3f7", "#f56e6e"]' class="mt-2"></div>
+    
+                                                    <div class="text-center mt-4 border-top">
+                                                        <div class="row">
+                                                            <div class="col-4">
+                                                                <div class="pt-3">
+                                                                    <p class="text-muted text-truncate mb-2">Completed</p>
+                                                                    <h5 class="font-size-16 mb-0">70</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="pt-3">
+                                                                    <p class="text-muted text-truncate mb-2">Pending</p>
+                                                                    <h5 class="font-size-16 mb-0">25</h5>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-4">
+                                                                <div class="pt-3">
+                                                                    <p class="text-muted text-truncate mb-2">Cancel</p>
+                                                                    <h5 class="font-size-16 mb-0">19</h5>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                </div>
+                                                <!-- end card body -->
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+    
+                                        <div class="col-xl-4 col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-start">
+                                                        <div class="flex-grow-1">
+                                                            <h5 class="card-title mb-3">Top Product</h5>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                            <div class="dropdown">
+                                                                <a class="dropdown-toggle text-muted" href="#"
+                                                                    data-bs-toggle="dropdown" aria-haspopup="true"
+                                                                    aria-expanded="false">
+                                                                    Monthly<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                                                </a>
+    
+                                                                <div class="dropdown-menu dropdown-menu-end">
+                                                                    <a class="dropdown-item" href="#">Yearly</a>
+                                                                    <a class="dropdown-item" href="#">Monthly</a>
+                                                                    <a class="dropdown-item" href="#">Weekly</a>
+                                                                    <a class="dropdown-item" href="#">Today</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+    
+                                                    <div class="mx-n4" data-simplebar style="max-height: 296px;">
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li class="px-4 py-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-primary bg-gradient rounded">
+                                                                                #1
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="text-muted mb-1 text-truncate">Polo blue T-shirt
+                                                                        </p>
+                                                                        <div class="fw-semibold font-size-15">$ 25.4</div>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="font-size-14 mb-0 text-truncate w-xs bg-light p-2 rounded text-center">
+                                                                            3.82k</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="px-4 py-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-primary bg-gradient rounded">
+                                                                                #2
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="text-muted mb-1 text-truncate">Hoodie for men</p>
+                                                                        <div class="fw-semibold font-size-15">$ 24.5</div>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="font-size-14 mb-0 text-truncate w-xs bg-light p-2 rounded text-center">
+                                                                            3.14k</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="px-4 py-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-primary bg-gradient rounded">
+                                                                                #3
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="text-muted mb-1 text-truncate">Red color Cap</p>
+                                                                        <div class="fw-semibold font-size-15">$ 22.5</div>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="font-size-14 mb-0 text-truncate w-xs bg-light p-2 rounded text-center">
+                                                                            2.84k</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="px-4 py-3">
+                                                                <div class="d-flex align-items-center">
+                                                                    <div class="flex-shrink-0 me-3">
+                                                                        <div class="avatar-sm">
+                                                                            <div
+                                                                                class="avatar-title bg-primary bg-gradient rounded">
+                                                                                #4
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="flex-grow-1 overflow-hidden">
+                                                                        <p class="text-muted mb-1 text-truncate">Pocket T-shirt</p>
+                                                                        <div class="fw-semibold font-size-15">$ 21.5</div>
+                                                                    </div>
+                                                                    <div class="flex-shrink-0">
+                                                                        <h5 class="font-size-14 mb-0 text-truncate w-xs bg-light p-2 rounded text-center">
+                                                                            2.06k</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end card -->
+                                        </div>
+                                        <!-- end col -->
+                                    </div>
+                                    <!-- end row -->
+                                </div>
+                                <!-- end col -->
+                                <div class="col-xxl-3">
+    
+                                    <div class="user-sidebar">
+                                        <div class="card">
+                                            <div class="card-body p-0">
+                                                <div class="user-profile-img">
+                                                    <img src="assets/images/pattern-bg.jpg"
+                                                        class="profile-img profile-foreground-img rounded-top" style="height: 120px;"
+                                                        alt="">
+                                                    <div class="overlay-content rounded-top">
+                                                        <div>
+                                                            <div class="user-nav p-3">
+                                                                <div class="d-flex justify-content-end">
+                                                                    <div class="dropdown">
+                                                                        <a class="dropdown-toggle" href="#" role="button"
+                                                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            <i data-eva="more-horizontal-outline" data-eva-width="20" data-eva-height="20"
+                                                                                class="fill-white"></i>
+                                                                        </a>
+                
+                                                                        <ul class="dropdown-menu dropdown-menu-end">
+                                                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                                                            <li><a class="dropdown-item" href="#">Another action</a>
+                                                                            </li>
+                                                                            <li><a class="dropdown-item" href="#">Something else
+                                                                                    here</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end user-profile-img -->
+                
+                                                <div class="mt-n5 position-relative">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/users/avatar-1.jpg" alt=""
+                                                            class="avatar-xl rounded-circle img-thumbnail">
+                
+                                                        <div class="mt-3">
+                                                            <h5 class="mb-1">Jennifer Bennett</h5>
+                                                            <p class="text-muted">Product Designer</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                
+                                                <div class="p-3">
+                                                    <div class="row text-center pb-3">
+                                                        <div class="col-6 border-end">
+                                                            <div class="p-1">
+                                                                <h5 class="mb-1">1,269</h5>
+                                                                <p class="text-muted mb-0">Products</p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="p-1">
+                                                                <h5 class="mb-1">5.2k</h5>
+                                                                <p class="text-muted mb-0">Followers</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <hr class="mb-4">
+                
+                                                    
+                                                    <div class="mb-4">
+                                                        <div class="d-flex align-items-start">
+                                                            <div class="flex-grow-1">
+                                                                <h5 class="card-title mb-3">Earning</h5>
+                                                            </div>
+                                                            <div>
+                                                                <button class="btn btn-link py-0 shadow-none"  data-bs-toggle="tooltip" data-bs-placement="left" data-bs-trigger="hover" title="Info">
+                                                                    <i data-eva="info-outline" class="fill-muted" data-eva-height="20" data-eva-width="20"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                
+                                                        <div id="chart-radialBar" class="apex-charts" data-colors='["#3b76e1"]'></div>
+                
+                                                        <div class="text-center mt-4">
+                                                            <h4>$26,256</h4>
+                                                            <p class="text-muted">Earning this Month</p>
+                                                            <div
+                                                                class="d-flex align-items-start justify-content-center gap-2">
+                                                                <div class="badge rounded-pill font-size-13 badge-soft-success">+ 2.65%
+                                                                </div>
+                                                                <div class="text-muted text-start text-truncate">From previous period</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <hr class="mb-4">
+                                                    <div class="px-4 mx-n3" data-simplebar style="height: 258px;">
+                
+                                                        <div>
+                                                            <h5 class="card-title mb-3">Recent Activity</h5>
+                
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li class="py-2">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div class="flex-shrink-0 me-3">
+                                                                            <div class="avatar-md h-auto p-1 py-2 bg-light rounded">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="mb-0">12</h5>
+                                                                                    <div>Sep</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="flex-grow-1 pt-2 text-muted">
+                                                                            <p class="mb-0">Responded to need “Volunteer Activities"</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                
+                                                                <li class="py-2">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div class="flex-shrink-0 me-3">
+                                                                            <div class="avatar-md h-auto p-1 py-2 bg-light rounded">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="mb-0">11</h5>
+                                                                                    <div>Sep</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="flex-grow-1 pt-2 text-muted">
+                                                                            <p class="mb-0">Everyone realizes would be desirable... <a href="javascript: void(0);">Read more</a></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="py-2">
+                                                                    <div class="d-flex align-items-start">
+                                                                        <div class="flex-shrink-0 me-3">
+                                                                            <div class="avatar-md h-auto p-1 py-2 bg-light rounded">
+                                                                                <div class="text-center">
+                                                                                    <h5 class="mb-0">10</h5>
+                                                                                    <div>Sep</div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="flex-grow-1 pt-2 text-muted">
+                                                                            <p class="mb-0">
+                                                                                Joined the group “Boardsmanship Forum”</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="pt-2">
+                                                                    <a href="#" class="btn btn-link w-100 shadow-none"><i class="mdi mdi-loading mdi-spin me-2"></i> Load More</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- end card body -->
+                                        </div>
+                                        <!-- end card -->
+                                    </div>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+    
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="card-title mb-3">Ratings & Reviews</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div class="dropdown">
+                                                        <a class="dropdown-toggle text-muted" href="#"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i data-eva="more-horizontal-outline" class="fill-muted"
+                                                                data-eva-height="18" data-eva-width="18"></i>
+                                                        </a>
+    
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Yearly</a>
+                                                            <a class="dropdown-item" href="#">Monthly</a>
+                                                            <a class="dropdown-item" href="#">Weekly</a>
+                                                            <a class="dropdown-item" href="#">Today</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row gy-4 gx-0">
+                                                <div class="col-lg-6">
+                                                    <div>
+                                                        <div class="text-center">
+                                                            <h1>4.3</h1>
+                                                            <div class="font-size-16 mb-1">
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star text-warning"></i>
+                                                                <i class="mdi mdi-star-half-full text-warning"></i>
+                                                            </div>
+                                                            <div class="text-muted">(14,254 Based)</div>
+                                                        </div>
+    
+                                                        <div class="mt-4">
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">5 <i
+                                                                                class="mdi mdi-star"></i></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="p-1 py-2">
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress">
+                                                                            <div class="progress-bar bg-gradient bg-primary"
+                                                                                role="progressbar" style="width: 90%"
+                                                                                aria-valuenow="90" aria-valuemin="0"
+                                                                                aria-valuemax="90">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">50%</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end row -->
+    
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">4 <i
+                                                                                class="mdi mdi-star"></i></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="p-1 py-2">
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress">
+                                                                            <div class="progress-bar bg-gradient bg-primary"
+                                                                                role="progressbar" style="width: 75%"
+                                                                                aria-valuenow="75" aria-valuemin="0"
+                                                                                aria-valuemax="75">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">20%</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end row -->
+    
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">3 <i
+                                                                                class="mdi mdi-star"></i></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="p-1 py-2">
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress">
+                                                                            <div class="progress-bar bg-gradient bg-primary"
+                                                                                role="progressbar" style="width: 60%"
+                                                                                aria-valuenow="60" aria-valuemin="0"
+                                                                                aria-valuemax="60">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">15%</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end row -->
+    
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">2 <i
+                                                                                class="mdi mdi-star"></i></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="p-1 py-2">
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress">
+                                                                            <div class="progress-bar bg-gradient bg-warning"
+                                                                                role="progressbar" style="width: 50%"
+                                                                                aria-valuenow="50" aria-valuemin="0"
+                                                                                aria-valuemax="50">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">10%</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end row -->
+    
+                                                            <div class="row align-items-center">
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">1 <i
+                                                                                class="mdi mdi-star"></i></h5>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="p-1 py-2">
+                                                                        <div
+                                                                            class="progress animated-progess custom-progress">
+                                                                            <div class="progress-bar bg-gradient bg-danger"
+                                                                                role="progressbar" style="width: 20%"
+                                                                                aria-valuenow="20" aria-valuemin="0"
+                                                                                aria-valuemax="20">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-auto">
+                                                                    <div class="p-1 py-2">
+                                                                        <h5 class="font-size-16 mb-0">5%</h5>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- end row -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end col -->
+    
+                                                <div class="col-lg-6">
+                                                    <div class="ps-lg-4">
+                                                        <div class="d-flex flex-wrap align-items-start gap-3">
+                                                            <h5 class="font-size-15">Reviews: </h5>
+                                                            <p class="text-muted">(14,254 Based)</p>
+                                                        </div>
+    
+                                                        <div class=" me-lg-n3 pe-lg-3" data-simplebar style="max-height: 266px;">
+                                                            <ul class="list-group list-group-flush">
+                                                                <li class="list-group-item">
+                                                                    <div>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <div class="badge bg-success bg-gradient mb-2"><i class="mdi mdi-star"></i> 4.1</div>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted font-size-13">12 Jul, 21</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        
+                                                                        <p class="text-muted mb-4">It will be as simple as in fact, It will seem like simplified</p>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14 mb-0">Samuel</h5>
+                                                                            </div>
+                        
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="hstack gap-3">
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-comment-text-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div class="dropdown">
+                                                                                        <a class="text-muted dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <i class="mdi mdi-dots-horizontal"></i>
+                                                                                        </a>
+                                                                                    
+                                                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <div>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <div class="badge bg-success bg-gradient mb-2"><i class="mdi mdi-star"></i> 4.0</div>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted font-size-13">06 Jul, 21</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="text-muted mb-4">Sed ut perspiciatis iste error sit</p>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14 mb-0">Joseph</h5>
+                                                                            </div>
+                        
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="hstack gap-3">
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-comment-text-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div class="dropdown">
+                                                                                        <a class="text-muted dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <i class="mdi mdi-dots-horizontal"></i>
+                                                                                        </a>
+                                                                                    
+                                                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                
+                                                                <li class="list-group-item">
+                                                                    <div>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <div class="badge bg-success bg-gradient mb-2"><i class="mdi mdi-star"></i> 4.2</div>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted font-size-13">26 Jun, 21</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="text-muted mb-4">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14 mb-0">Paul</h5>
+                                                                            </div>
+                        
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="hstack gap-3">
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-comment-text-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div class="dropdown">
+                                                                                        <a class="text-muted dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <i class="mdi mdi-dots-horizontal"></i>
+                                                                                        </a>
+                                                                                    
+                                                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                
+                                                                <li class="list-group-item">
+                                                                    <div>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <div class="badge bg-success bg-gradient mb-2"><i class="mdi mdi-star"></i> 4.1</div>
+                                                                            </div>
+                                                                            <div class="flex-shrink-0">
+                                                                                <p class="text-muted font-size-13">24 Jun, 21</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <p class="text-muted mb-4">Ut enim ad minima veniam, quis nostrum ullam corporis suscipit consequatur nisi ut</p>
+                                                                        <div class="d-flex align-items-start">
+                                                                            <div class="flex-grow-1">
+                                                                                <h5 class="font-size-14 mb-0">Patrick</h5>
+                                                                            </div>
+                        
+                                                                            <div class="flex-shrink-0">
+                                                                                <div class="hstack gap-3">
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Like">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-thumb-up-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div data-bs-toggle="tooltip" data-bs-placement="top" title="Comment">
+                                                                                        <a href="#" class="text-muted"><i class="mdi mdi-comment-text-outline"></i></a>
+                                                                                    </div>
+                                                                                    <div class="vr"></div>
+                                                                                    <div class="dropdown">
+                                                                                        <a class="text-muted dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                                            <i class="mdi mdi-dots-horizontal"></i>
+                                                                                        </a>
+                                                                                    
+                                                                                        <div class="dropdown-menu dropdown-menu-right">
+                                                                                        <a class="dropdown-item" href="#">Action</a>
+                                                                                        <a class="dropdown-item" href="#">Another action</a>
+                                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                                
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end col -->
+                                            </div>
+                                            <!-- end row -->
+                                        </div>
+                                        <!-- end card body -->
+                                    </div>
+                                    <!-- end card -->
+                                </div>
+                                <!-- end col -->
+    
+                                <div class="col-xl-6">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-start">
+                                                <div class="flex-grow-1">
+                                                    <h5 class="card-title mb-3">Transaction</h5>
+                                                </div>
+                                                <div class="flex-shrink-0">
+                                                    <div class="dropdown">
+                                                        <a class="dropdown-toggle text-reset" href="#" data-bs-toggle="dropdown"
+                                                            aria-haspopup="true" aria-expanded="false">
+                                                            <span class="fw-semibold">Report By:</span> <span
+                                                                class="text-muted">Monthly<i
+                                                                    class="mdi mdi-chevron-down ms-1"></i></span>
+                                                        </a>
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item" href="#">Yearly</a>
+                                                            <a class="dropdown-item" href="#">Monthly</a>
+                                                            <a class="dropdown-item" href="#">Weekly</a>
+                                                            <a class="dropdown-item" href="#">Today</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="table-responsive">
+                                                <table class="table align-middle table-nowrap mb-0">
+                                                    <thead class="table-light">
+                                                        <tr>
+                                                            <th class="align-middle">Order ID</th>
+                                                            <th class="align-middle">Billing Name</th>
+                                                            <th class="align-middle">Date</th>
+                                                            <th class="align-middle">Total</th>
+                                                            <th class="align-middle">Pay Status</th>
+                                                            <th class="align-middle">Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><a href="javascript: void(0);" class="text-body fw-semibold">#BR2150</a> </td>
+                                                            <td>Smith</td>
+                                                            <td>
+                                                                07 Oct, 2021
+                                                            </td>
+                                                            <td>
+                                                                $24.05
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <button type="button" class="btn btn-primary bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                        <i data-eva="eye" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                        <i data-eva="edit" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                        <i data-eva="trash-2" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+    
+                                                        <tr>
+                                                            <td><a href="javascript: void(0);" class="text-body fw-semibold">#BR2149</a> </td>
+                                                            <td>James</td>
+                                                            <td>
+                                                                07 Oct, 2021
+                                                            </td>
+                                                            <td>
+                                                                $26.15
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <button type="button" class="btn btn-primary bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                        <i data-eva="eye" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                        <i data-eva="edit" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                        <i data-eva="trash-2" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+    
+                                                        <tr>
+                                                            <td><a href="javascript: void(0);" class="text-body fw-semibold">#BR2148</a> </td>
+                                                            <td>Jill</td>
+                                                            <td>
+                                                                06 Oct, 2021
+                                                            </td>
+                                                            <td>
+                                                                $21.25
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill badge-soft-warning font-size-11">Refund</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <button type="button" class="btn btn-primary bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                        <i data-eva="eye" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                        <i data-eva="edit" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                        <i data-eva="trash-2" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+    
+                                                        <tr>
+                                                            <td><a href="javascript: void(0);" class="text-body fw-semibold">#BR2147</a> </td>
+                                                            <td>Kyle</td>
+                                                            <td>
+                                                                05 Oct, 2021
+                                                            </td>
+                                                            <td>
+                                                                $25.03
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <button type="button" class="btn btn-primary bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                        <i data-eva="eye" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                        <i data-eva="edit" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                        <i data-eva="trash-2" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+    
+                                                        <tr>
+                                                            <td><a href="javascript: void(0);" class="text-body fw-semibold">#BR2146</a> </td>
+                                                            <td>Robert</td>
+                                                            <td>
+                                                                05 Oct, 2021
+                                                            </td>
+                                                            <td>
+                                                                $22.61
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <span class="badge badge-pill badge-soft-success font-size-11">Paid</span>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    <button type="button" class="btn btn-primary bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="View">
+                                                                        <i data-eva="eye" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-success bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                        <i data-eva="edit" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-danger bg-gradient btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                        <i data-eva="trash-2" data-eva-height="14" data-eva-width="14" class="fill-white align-text-top"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+    
+                                                    </tbody>
+                                                </table>
+                                                <!-- end table -->
+                                            </div>
+                                            <!-- end table responsive -->
+                                        </div>
+                                        <!-- end card body -->
+                                    </div>
+                                    <!-- end card -->
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+                        </div>
+                        <!-- container-fluid -->
+                    </div>
+                    <!-- End Page-content -->
+    
+                    <footer class="footer">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <script>document.write(new Date().getFullYear())</script> &copy; Borex. Design & Develop by Themesbrand
+                                </div>
+                            </div>
+                        </div>
                     </footer>
                 </div>
+                <!-- end main content-->
+    
             </div>
-        </div>
-    </body>
+            <!-- END layout-wrapper -->
+    
+            <!-- Right Sidebar -->
+            <div class="right-bar">
+                <div data-simplebar class="h-100">
+                    <div class="rightbar-title d-flex align-items-center bg-dark p-3">
+    
+                        <h5 class="m-0 me-2 text-white">Theme Customizer</h5>
+    
+                        <a href="javascript:void(0);" class="right-bar-toggle-close ms-auto">
+                            <i class="mdi mdi-close noti-icon"></i>
+                        </a>
+                    </div>
+    
+                    <!-- Settings -->
+                    <hr class="m-0" />
+    
+                    <div class="p-4">
+                        <h6 class="mb-3">Layout</h6>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout"
+                                id="layout-vertical" value="vertical">
+                            <label class="form-check-label" for="layout-vertical">Vertical</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout"
+                                id="layout-horizontal" value="horizontal">
+                            <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+                        </div>
+    
+                        <h6 class="mt-4 mb-3">Layout Mode</h6>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-mode"
+                                id="layout-mode-light" value="light">
+                            <label class="form-check-label" for="layout-mode-light">Light</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-mode"
+                                id="layout-mode-dark" value="dark">
+                            <label class="form-check-label" for="layout-mode-dark">Dark</label>
+                        </div>
+    
+                        <h6 class="mt-4 mb-3">Layout Width</h6>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-width"
+                                id="layout-width-fluid" value="fluid" onchange="document.body.setAttribute('data-layout-size', 'fluid')">
+                            <label class="form-check-label" for="layout-width-fluid">Fluid</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-width"
+                                id="layout-width-boxed" value="boxed" onchange="document.body.setAttribute('data-layout-size', 'boxed')">
+                            <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+                        </div>
+    
+                        <h6 class="mt-4 mb-3">Layout Position</h6>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-position"
+                                id="layout-position-fixed" value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
+                            <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-position"
+                                id="layout-position-scrollable" value="scrollable" onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
+                            <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+                        </div>
+    
+                        <h6 class="mt-4 mb-3">Topbar Color</h6>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="topbar-color"
+                                id="topbar-color-light" value="light" onchange="document.body.setAttribute('data-topbar', 'light')">
+                            <label class="form-check-label" for="topbar-color-light">Light</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="topbar-color"
+                                id="topbar-color-dark" value="dark" onchange="document.body.setAttribute('data-topbar', 'dark')">
+                            <label class="form-check-label" for="topbar-color-dark">Dark</label>
+                        </div>
+    
+                        <div id="sidebar-setting">
+                        <h6 class="mt-4 mb-3 sidebar-setting">Sidebar Size</h6>
+    
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-size"
+                                id="sidebar-size-default" value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
+                            <label class="form-check-label" for="sidebar-size-default">Default</label>
+                        </div>
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-size"
+                                id="sidebar-size-compact" value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
+                            <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+                        </div>
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-size"
+                                id="sidebar-size-small" value="small" onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
+                            <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+                        </div>
+    
+                        <h6 class="mt-4 mb-3 sidebar-setting">Sidebar Color</h6>
+    
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-color"
+                                id="sidebar-color-light" value="light" onchange="document.body.setAttribute('data-sidebar', 'light')">
+                            <label class="form-check-label" for="sidebar-color-light">Light</label>
+                        </div>
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-color"
+                                id="sidebar-color-dark" value="dark" onchange="document.body.setAttribute('data-sidebar', 'dark')">
+                            <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+                        </div>
+                        <div class="form-check sidebar-setting">
+                            <input class="form-check-input" type="radio" name="sidebar-color"
+                                id="sidebar-color-brand" value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')">
+                            <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+                        </div>
+                    </div>
+    
+                        <h6 class="mt-4 mb-3">Direction</h6>
+    
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-direction"
+                                id="layout-direction-ltr" value="ltr">
+                            <label class="form-check-label" for="layout-direction-ltr">LTR</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="layout-direction"
+                                id="layout-direction-rtl" value="rtl">
+                            <label class="form-check-label" for="layout-direction-rtl">RTL</label>
+                        </div>
+    
+                    </div>
+    
+                </div> <!-- end slimscroll-menu-->
+            </div>
+            <!-- /Right-bar -->
+    
+            <!-- Right bar overlay-->
+            <div class="rightbar-overlay"></div>
+    
+            <!-- chat offcanvas -->
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasActivity" aria-labelledby="offcanvasActivityLabel">
+                <div class="offcanvas-header border-bottom">
+                  <h5 id="offcanvasActivityLabel">Offcanvas right</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  ...
+                </div>
+            </div>
+    
+            <!-- JAVASCRIPT -->
+            <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+            <script src="assets/libs/metismenujs/metismenujs.min.js"></script>
+            <script src="assets/libs/simplebar/simplebar.min.js"></script>
+            <script src="assets/libs/eva-icons/eva.min.js"></script>
+    
+            <!-- apexcharts -->
+            <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+            
+            <script src="assets/js/pages/dashboard.init.js"></script>
+    
+            <script src="assets/js/app.js"></script>
+    
+        </body>
 </html>
