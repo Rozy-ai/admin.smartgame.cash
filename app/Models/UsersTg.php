@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class UsersTg extends Authenticatable
 {
@@ -61,5 +62,10 @@ class UsersTg extends Authenticatable
             'hash' => 'hashed',
             'tdata' => 'hashed',
         ];
+    }
+
+    public function payment(): HasMany
+    {
+        return $this->hasMany(Payment::class);
     }
 }

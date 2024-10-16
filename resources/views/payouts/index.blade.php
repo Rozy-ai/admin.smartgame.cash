@@ -27,6 +27,9 @@
                                 <tr>
                                     <th scope="col">payout_id</th>
                                     <th scope="col">payment_id</th>
+                                    <th scope="col">username</th>
+                                    <th scope="col">F N</th>
+                                    <th scope="col">card_number</th>
                                     <th scope="col">amount</th>
                                     <th scope="col">payout_date</th>
                                     <th scope="col">status</th>
@@ -42,6 +45,11 @@
                                     <td>
                                         <a href="#" class="text-body">{{ $payout->payment_id }}</a>
                                     </td>
+                                    <td>
+                                        <a href="#" class="text-body">{{ $payout->payment->user->username }}</a>
+                                    </td>
+                                    <td><span class="badge badge-soft-success mb-0">{{ $payout->payment->user->first_name }} {{ $payout->payment->user->last_name }}</span></td>
+                                    <td>{{ $payout->payment->card_number }}</td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payout->amount }}</span></td>
                                     <td>{{ $payout->payout_date }}</td>
                                     <td><span class="badge @if($payout->status == 'Completed') badge-soft-success @elseif($payout->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payout->status }}</span></td>

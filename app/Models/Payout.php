@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Payout extends Authenticatable
 {
@@ -47,5 +48,10 @@ class Payout extends Authenticatable
         return [
             'payout_date' => 'datetime'
         ];
+    }
+
+    public function payment(): BelongsTo
+    {
+        return $this->belongsTo(related: Payment::class);
     }
 }
