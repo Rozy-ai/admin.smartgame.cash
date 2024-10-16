@@ -27,6 +27,8 @@
                                 <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">user_id</th>
+                                    <th scope="col">username</th>
+                                    <th scope="col">F N</th>
                                     <th scope="col">amount</th>
                                     <th scope="col">external_id</th>
                                     <th scope="col">card_number</th>
@@ -44,6 +46,16 @@
                                     <td>{{ $payment->id }}</td>
                                     <td>
                                         <a href="#" class="text-body">{{ $payment->user_id }}</a>
+                                    </td>
+                                    <td>
+                                        @if(isset($payment->user->username))
+                                        <a href="#" class="text-body">{{ $payment->user->username }}</a>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if(isset($payment->user->first_name) && isset($payment->user->last_name))
+                                        <span class="badge badge-soft-success mb-0">{{ $payment->user->first_name }} {{ $payment->user->last_name }}</span>
+                                        @endif
                                     </td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payment->amount }}</span></td>
                                     <td>{{ $payment->external_id }}</td>

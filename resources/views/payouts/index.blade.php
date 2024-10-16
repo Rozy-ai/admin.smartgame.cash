@@ -46,9 +46,15 @@
                                         <a href="#" class="text-body">{{ $payout->payment_id }}</a>
                                     </td>
                                     <td>
+                                        @if(isset($payout->payment->user->username))
                                         <a href="#" class="text-body">{{ $payout->payment->user->username }}</a>
+                                        @endif
                                     </td>
-                                    <td><span class="badge badge-soft-success mb-0">{{ $payout->payment->user->first_name }} {{ $payout->payment->user->last_name }}</span></td>
+                                    <td>
+                                        @if(isset($payout->payment->user->first_name) && isset($payout->payment->user->last_name))
+                                        <span class="badge badge-soft-success mb-0">{{ $payout->payment->user->first_name }} {{ $payout->payment->user->last_name }}</span>
+                                        @endif
+                                    </td>
                                     <td>{{ $payout->payment->card_number }}</td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payout->amount }}</span></td>
                                     <td>{{ $payout->payout_date }}</td>
