@@ -44,7 +44,7 @@
                                     </td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payout->amount }}</span></td>
                                     <td>{{ $payout->payout_date }}</td>
-                                    <td><span class="badge badge-soft-success mb-0">{{ $payout->status }}</span></td>
+                                    <td><span class="badge @if($payout->status == 'Completed') badge-soft-success @elseif($payout->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payout->status }}</span></td>
                                     <td>{{ $payout->provider }}</td>
                                         {{-- <td>
                                         <ul class="list-inline mb-0">

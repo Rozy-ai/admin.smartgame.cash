@@ -48,7 +48,7 @@
                                     <td><span class="badge badge-soft-success mb-0">{{ $payment->amount }}</span></td>
                                     <td>{{ $payment->external_id }}</td>
                                     <td>{{ $payment->card_number }}</td>
-                                    <td><span class="badge badge-soft-success mb-0">{{ $payment->status }}</span></td>
+                                    <td><span class="badge @if($payment->status == 'Completed') badge-soft-success @elseif($payment->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payment->status }}</span></td>
                                     <td>{{ $payment->created_at }}</td>
                                     <td>{{ $payment->url }}</td>
                                     <td>{{ $payment->provider }}</td>

@@ -41,21 +41,21 @@
     
     
                                 <li>
-                                    <a href="apps-calendar.html">
+                                    <a href="/users">
                                         <i class="icon nav-icon" data-eva="calendar-outline"></i>
                                         <span class="menu-item" data-key="t-calendar">Users</span>
                                     </a>
                                 </li>
     
                                 <li>
-                                    <a href="apps-chat.html">
+                                    <a href="/payments">
                                         <i class="icon nav-icon" data-eva="message-circle-outline"></i>
                                         <span class="menu-item" data-key="t-chat">Payments</span>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="apps-chat.html">
+                                    <a href="/payouts">
                                         <i class="icon nav-icon" data-eva="message-circle-outline"></i>
                                         <span class="menu-item" data-key="t-chat">Payouts</span>
                                     </a>

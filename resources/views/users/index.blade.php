@@ -32,7 +32,7 @@
                                     <th scope="col">Balance</th>
                                     <th scope="col">Energy</th>
                                     <th scope="col">Multitap</th>
-                                    <th scope="col">EnergyLimit</th>
+                                    <th scope="col">Level</th>
                                     <th scope="col">RechargingSpeed</th>
                                     <th scope="col">Referrals</th>
                                     <th scope="col">Inviter_id</th>
