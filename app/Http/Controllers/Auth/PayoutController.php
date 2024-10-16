@@ -23,7 +23,7 @@ public static function middleware(): array
 }
 public function index()
 {
-    $payouts = Payout::with('payment')->paginate(30);
+    $payouts = Payout::with('payment')->orderBy('payout_id', 'desc')->paginate(30);
     return view('payouts.index', compact('payouts'));
 }
 }
