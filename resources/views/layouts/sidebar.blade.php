@@ -14,7 +14,7 @@
     
                         <a href="index.html" class="logo logo-light">
                             <span class="logo-lg">
-                                <img src="assets/images/logo-light.png" alt="" height="22">
+                                <img src="assets/images/coin.png" alt="" height="22">
                             </span>
                             <span class="logo-sm">
                                 <img src="assets/images/logo-light-sm.png" alt="" height="22">
@@ -36,28 +36,28 @@
                         <div id="sidebar-menu">
                             <!-- Left Menu Start -->
                             <ul class="metismenu list-unstyled" id="side-menu">
-                                <li class="menu-title" data-key="t-menu">Menu</li>
+                                <li class="menu-title" data-key="t-menu">МЕНЮ</li>
     
     
     
                                 <li>
                                     <a href="/users">
                                         <i class="icon nav-icon" data-eva="calendar-outline"></i>
-                                        <span class="menu-item" data-key="t-calendar">Users</span>
+                                        <span class="menu-item" data-key="t-calendar">Пользователи</span>
                                     </a>
                                 </li>
     
                                 <li>
                                     <a href="/payments">
                                         <i class="icon nav-icon" data-eva="message-circle-outline"></i>
-                                        <span class="menu-item" data-key="t-chat">Payments</span>
+                                        <span class="menu-item" data-key="t-chat">Платежи</span>
                                     </a>
                                 </li>
 
                                 <li>
                                     <a href="/payouts">
                                         <i class="icon nav-icon" data-eva="message-circle-outline"></i>
-                                        <span class="menu-item" data-key="t-chat">Payouts</span>
+                                        <span class="menu-item" data-key="t-chat">Выплаты</span>
                                     </a>
                                 </li>
     

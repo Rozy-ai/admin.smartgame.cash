@@ -45,7 +45,7 @@
     
                                 <a href="index.html" class="logo logo-light">
                                     <span class="logo-lg">
-                                        <img src="assets/images/logo-light.png" alt="" height="22">
+                                        <img src="assets/images/coin.png" alt="" height="22">
                                     </span>
                                     <span class="logo-sm">
                                         <img src="assets/images/logo-light-sm.png" alt="" height="22">
@@ -62,7 +62,7 @@
                             </button>
     
                             <div class="d-none d-sm-block ms-3 align-self-center">
-                                <h4 class="page-title">Dashboard</h4>
+                                <h4 class="page-title">Админ Панель</h4>
                             </div>
     
                         </div>
@@ -88,12 +88,12 @@
                                         <h6 class="mb-0">{{ Auth::user()->name }}</h6>
                                         <p class="mb-0 font-size-11 text-muted">{{ Auth::user()->email }}</p>
                                     </div>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Профиль</span></a>
                                     <div class="dropdown-divider"></div>
                                     {{-- <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a> --}}
                                     <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                         <i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> 
-                                        <span class="align-middle">Logout</span></a>
+                                        <span class="align-middle">Выйти</span></a>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                             @csrf
                                         </form>
@@ -124,7 +124,7 @@
                                         <img src="assets/images/logo-light-sm.png" alt="" height="22">
                                     </span>
                                     <span class="logo-lg">
-                                        <img src="assets/images/logo-light.png" alt="" height="22">
+                                        <img src="assets/images/coin.png" alt="" height="22">
                                     </span>
                                 </a>
                             </div>
@@ -357,14 +357,14 @@
                                         <h6 class="mb-0">Jennifer Bennett</h6>
                                         <p class="mb-0 font-size-11 text-muted">jennifer.bennett@email.com</p>
                                     </div>
-                                    <a class="dropdown-item" href="contacts-profile.html"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Profile</span></a>
-                                    <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Messages</span></a>
-                                    <a class="dropdown-item" href="pages-faqs.html"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Help</span></a>
+                                    <a class="dropdown-item" href="contacts-profile.html"><i class="mdi mdi-account-circle text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Профиль</span></a>
+                                    <a class="dropdown-item" href="apps-chat.html"><i class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Сообщения</span></a>
+                                    <a class="dropdown-item" href="pages-faqs.html"><i class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Помощь</span></a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Balance : <b>$6951.02</b></span></a>
-                                    <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Settings</span><span class="badge badge-soft-success ms-auto">New</span></a>
-                                    <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Lock screen</span></a>
-                                    <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Logout</span></a>
+                                    <a class="dropdown-item" href="#"><i class="mdi mdi-wallet text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Баланс : <b>$6951.02</b></span></a>
+                                    <a class="dropdown-item d-flex align-items-center" href="#"><i class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Настройки</span><span class="badge badge-soft-success ms-auto">New</span></a>
+                                    <a class="dropdown-item" href="auth-lock-screen.html"><i class="mdi mdi-lock text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Экран блокировки</span></a>
+                                    <a class="dropdown-item" href="auth-logout.html"><i class="mdi mdi-logout text-muted font-size-16 align-middle me-1"></i> <span class="align-middle">Выйти</span></a>
                                 </div>
                             </div>
                         </div>
@@ -703,7 +703,7 @@
                 <div data-simplebar class="h-100">
                     <div class="rightbar-title d-flex align-items-center bg-dark p-3">
     
-                        <h5 class="m-0 me-2 text-white">Theme Customizer</h5>
+                        <h5 class="m-0 me-2 text-white">Настройщик тем</h5>
     
                         <a href="javascript:void(0);" class="right-bar-toggle-close ms-auto">
                             <i class="mdi mdi-close noti-icon"></i>
@@ -714,105 +714,105 @@
                     <hr class="m-0" />
     
                     <div class="p-4">
-                        <h6 class="mb-3">Layout</h6>
+                        <h6 class="mb-3">Макет</h6>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout"
                                 id="layout-vertical" value="vertical">
-                            <label class="form-check-label" for="layout-vertical">Vertical</label>
+                            <label class="form-check-label" for="layout-vertical">Вертикальный</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout"
                                 id="layout-horizontal" value="horizontal">
-                            <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+                            <label class="form-check-label" for="layout-horizontal">Горизонтальный</label>
                         </div>
     
-                        <h6 class="mt-4 mb-3">Layout Mode</h6>
+                        <h6 class="mt-4 mb-3">Режим макета</h6>
     
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-mode"
                                 id="layout-mode-light" value="light">
-                            <label class="form-check-label" for="layout-mode-light">Light</label>
+                            <label class="form-check-label" for="layout-mode-light">Светлый</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-mode"
                                 id="layout-mode-dark" value="dark">
-                            <label class="form-check-label" for="layout-mode-dark">Dark</label>
+                            <label class="form-check-label" for="layout-mode-dark">Темный</label>
                         </div>
     
-                        <h6 class="mt-4 mb-3">Layout Width</h6>
+                        <h6 class="mt-4 mb-3">Ширина макета</h6>
     
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-width"
                                 id="layout-width-fluid" value="fluid" onchange="document.body.setAttribute('data-layout-size', 'fluid')">
-                            <label class="form-check-label" for="layout-width-fluid">Fluid</label>
+                            <label class="form-check-label" for="layout-width-fluid">Подвижный</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-width"
                                 id="layout-width-boxed" value="boxed" onchange="document.body.setAttribute('data-layout-size', 'boxed')">
-                            <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+                            <label class="form-check-label" for="layout-width-boxed">В коробке</label>
                         </div>
     
-                        <h6 class="mt-4 mb-3">Layout Position</h6>
+                        <h6 class="mt-4 mb-3">Расположение макета</h6>
     
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-position"
                                 id="layout-position-fixed" value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')">
-                            <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+                            <label class="form-check-label" for="layout-position-fixed">Зафиксированный</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="layout-position"
                                 id="layout-position-scrollable" value="scrollable" onchange="document.body.setAttribute('data-layout-scrollable', 'true')">
-                            <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+                            <label class="form-check-label" for="layout-position-scrollable">Прокручиваемый</label>
                         </div>
     
-                        <h6 class="mt-4 mb-3">Topbar Color</h6>
+                        <h6 class="mt-4 mb-3">Цвет верхней панели</h6>
     
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="topbar-color"
                                 id="topbar-color-light" value="light" onchange="document.body.setAttribute('data-topbar', 'light')">
-                            <label class="form-check-label" for="topbar-color-light">Light</label>
+                            <label class="form-check-label" for="topbar-color-light">Светлый</label>
                         </div>
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="topbar-color"
                                 id="topbar-color-dark" value="dark" onchange="document.body.setAttribute('data-topbar', 'dark')">
-                            <label class="form-check-label" for="topbar-color-dark">Dark</label>
+                            <label class="form-check-label" for="topbar-color-dark">Темный</label>
                         </div>
     
                         <div id="sidebar-setting">
-                        <h6 class="mt-4 mb-3 sidebar-setting">Sidebar Size</h6>
+                        <h6 class="mt-4 mb-3 sidebar-setting">Размер боковой панели</h6>
     
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-size"
                                 id="sidebar-size-default" value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')">
-                            <label class="form-check-label" for="sidebar-size-default">Default</label>
+                            <label class="form-check-label" for="sidebar-size-default">По умолчанию</label>
                         </div>
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-size"
                                 id="sidebar-size-compact" value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')">
-                            <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+                            <label class="form-check-label" for="sidebar-size-compact">Компактный</label>
                         </div>
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-size"
                                 id="sidebar-size-small" value="small" onchange="document.body.setAttribute('data-sidebar-size', 'sm')">
-                            <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+                            <label class="form-check-label" for="sidebar-size-small">Маленький (Просмотр значков)</label>
                         </div>
     
-                        <h6 class="mt-4 mb-3 sidebar-setting">Sidebar Color</h6>
+                        <h6 class="mt-4 mb-3 sidebar-setting">Цвет боковой панели</h6>
     
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-color"
                                 id="sidebar-color-light" value="light" onchange="document.body.setAttribute('data-sidebar', 'light')">
-                            <label class="form-check-label" for="sidebar-color-light">Light</label>
+                            <label class="form-check-label" for="sidebar-color-light">Светлый</label>
                         </div>
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-color"
                                 id="sidebar-color-dark" value="dark" onchange="document.body.setAttribute('data-sidebar', 'dark')">
-                            <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+                            <label class="form-check-label" for="sidebar-color-dark">Темный</label>
                         </div>
                         <div class="form-check sidebar-setting">
                             <input class="form-check-input" type="radio" name="sidebar-color"
                                 id="sidebar-color-brand" value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')">
-                            <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+                            <label class="form-check-label" for="sidebar-color-brand">Фирменный</label>
                         </div>
                     </div>
     

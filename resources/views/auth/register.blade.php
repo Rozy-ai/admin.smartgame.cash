@@ -17,7 +17,7 @@
                                                 <div class="mb-4 mb-md-5">
                                                     <a href="index.html" class="d-block auth-logo">
                                                         <img src="assets/images/logo-dark.png" alt="" height="22" class="auth-logo-dark me-start">
-                                                        <img src="assets/images/logo-light.png" alt="" height="22" class="auth-logo-light me-start">
+                                                        <img src="assets/images/coin.png" alt="" height="22" class="auth-logo-light me-start">
                                                     </a>
                                                 </div>
                                                 <div class="auth-content my-auto">
