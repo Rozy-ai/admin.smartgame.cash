@@ -23,7 +23,7 @@ public static function middleware(): array
 }
 public function index()
 {
-    $users = UsersTg::paginate(30);
+    $users = UsersTg::orderBy('joining_date', 'desc')->paginate(30);
     return view('users.index', compact('users'));
 }
 
