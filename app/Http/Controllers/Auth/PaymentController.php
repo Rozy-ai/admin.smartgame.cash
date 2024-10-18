@@ -18,7 +18,7 @@ public static function middleware(): array
 {
     return [
         // new Middleware('guest', except: ['home', 'logout']),
-        new Middleware('auth', only: ['index', 'edit', 'view', 'update', 'destroy']),
+        new Middleware('auth', only: ['index', 'edit', 'show', 'update']),
     ];
 }
 public function index()
@@ -27,10 +27,26 @@ public function index()
     return view('payments.index', compact('payments'));
 }
 
-public function view($id)
+public function show($id)
 {    
     $payment = Payment::findOrFail($id);
 
     return view('payments.view',compact('payment'));
 }
+
+public function edit($id)
+{
+    $payment = Payment::findOrFail($id);
+    return view('payments.edit', compact('payment'));
+}
+
+public function update(Request $request, $id): RedirectResponse
+{
+    $payment = Payment::findOrFail($id);
+    $payment->status = $request->input('status');
+    $payment->save(); 
+    // $payment->update($request->all());
+    return redirect('payments')->with('success', 'статус обновился');
+}
+
 }

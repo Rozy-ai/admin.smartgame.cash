@@ -25,8 +25,13 @@ Route::controller(LoginRegisterController::class)->group(function() {
     // Route::get('products/{id}/edit', [UserController::class, 'edit']);
     // Route::put('products/{id}', [UserController::class, 'update']);
     // Route::delete('products/{id}', [UserController::class, 'destroy']);
-    Route::get('/payments', [PaymentController::class, 'index']);
-    Route::get('/payments/{id}', [PaymentController::class, 'view']);
-    Route::get('/payouts', [PayoutController::class, 'index']);
-    Route::get('/payouts/{payout_id}', [PayoutController::class, 'view']);
+
+    Route::resource('payments', PaymentController::class);
+    // Route::get('/payments', [PaymentController::class, 'index']);
+    // Route::get('/payments/{id}', [PaymentController::class, 'view']);
+    // Route::get('payments/{id}/edit', [PaymentController::class, 'edit']);
+    // Route::post('payments/{id}', [PaymentController::class, 'update']);
+    Route::resource('payouts', PayoutController::class);
+    // Route::get('/payouts', [PayoutController::class, 'index']);
+    // Route::get('/payouts/{payout_id}', [PayoutController::class, 'view']);
 });

@@ -20,6 +20,7 @@ class Payment extends Authenticatable
      * @var array<int, string>
      */
     protected $table = 'payments';
+    public $timestamps = false;
     protected $fillable = [
         'id',
         'user_id',
