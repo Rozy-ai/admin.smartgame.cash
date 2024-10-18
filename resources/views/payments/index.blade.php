@@ -6,15 +6,23 @@
         <div class="row align-items-center">
             <div class="col-md-6">
                 <div class="mb-3">
-                    <h5 class="card-title">Список выплат <span class="text-muted fw-normal ms-2">({{count($payments)}})</span></h5>
+                    <h5 class="card-title">Список Платёж <span class="text-muted fw-normal ms-2">({{count($payments)}})</span></h5>
                 </div>
             </div>
-
-            <div class="col-md-6">
-
-
+            <form action="{{ route('payments.index') }}" method="GET">
+                <div class="row">
+                <div class="col-lg-4 p-0">
+                    <div class="mb-3">
+                    <input type="text" name="search" class="form-control" placeholder="Поиск Платёж..." value="{{ request('search') }}">
+                    </div>
+                </div>
+                <div class="col-lg-2 p-0" style="margin-left: -60px;">
+                    <button type="submit" class="btn btn-primary">Поиск</button>
+                </div>
             </div>
+            </form>
         </div>
+        
 
         <!-- end row -->
 

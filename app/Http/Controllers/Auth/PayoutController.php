@@ -21,9 +21,20 @@ public static function middleware(): array
         new Middleware('auth', only: ['index', 'edit', 'show', 'update']),
     ];
 }
-public function index()
+public function index(Request $request)
 {
-    $payouts = Payout::with('payment')->orderBy('payout_id', 'desc')->paginate(30);
+    $search = $request->input('search');
+    $payouts = Payout::query()
+    ->when($search, function ($query, $search) {
+        return $query->where('payout_id', 'like', "%{$search}%")
+                    ->orWhereHas('payment.user', function($query) use ($search) {
+                        $query->where('username', 'like', "%{$search}%");
+                    })
+                     ->orWhere('amount', 'like', "%{$search}%")
+                     ->orWhere('amount', 'like', "%{$search}%")
+                     ->orWhere('status', 'like', "%{$search}%");
+    })
+    ->orderBy('payout_id', 'desc')->paginate(30);
     return view('payouts.index', compact('payouts'));
 }
 

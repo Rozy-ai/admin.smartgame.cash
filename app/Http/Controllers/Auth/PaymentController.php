@@ -21,9 +21,21 @@ public static function middleware(): array
         new Middleware('auth', only: ['index', 'edit', 'show', 'update']),
     ];
 }
-public function index()
+public function index(Request $request)
 {
-    $payments = Payment::with('user')->orderBy('id', 'desc')->paginate(30);
+    $search = $request->input('search');
+    $payments = Payment::query()
+    ->when($search, function ($query, $search) {
+        return $query->where('card_number', 'like', "%{$search}%")
+                    ->orWhereHas('user', function($query) use ($search) {
+                        $query->where('username', 'like', "%{$search}%");
+                    })
+                     ->orWhere('external_id', 'like', "%{$search}%")
+                     ->orWhere('user_id', 'like', "%{$search}%")
+                     ->orWhere('amount', 'like', "%{$search}%")
+                     ->orWhere('status', 'like', "%{$search}%");
+    })
+    ->with('user')->orderBy('id', 'desc')->paginate(30);
     return view('payments.index', compact('payments'));
 }
 

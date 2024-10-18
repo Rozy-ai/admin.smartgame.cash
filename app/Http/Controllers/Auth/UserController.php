@@ -21,9 +21,17 @@ public static function middleware(): array
         new Middleware('auth', only: ['index', 'edit', 'update', 'show']),
     ];
 }
-public function index()
+public function index(Request $request)
 {
-    $users = UsersTg::orderBy('joining_date', 'desc')->paginate(30);
+    $search = $request->input('search');
+    $users = UsersTg::query()
+    ->when($search, function ($query, $search) {
+        return $query->where('username', 'like', "%{$search}%")
+                     ->orWhere('first_name', 'like', "%{$search}%")
+                     ->orWhere('id', 'like', "%{$search}%")
+                     ->orWhere('last_name', 'like', "%{$search}%");
+    })
+    ->orderBy('joining_date', 'desc')->paginate(30);
     return view('users.index', compact('users'));
 }
 
