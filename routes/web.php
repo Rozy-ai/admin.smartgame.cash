@@ -11,7 +11,7 @@ use App\Http\Controllers\Auth\PayoutController;
 // });
 
 Route::controller(LoginRegisterController::class)->group(function() {
-    Route::get('/register', 'register')->name('register');
+    // Route::get('/register', 'register')->name('register');
     Route::post('/store', 'store')->name('store');
     Route::get('/login', 'login')->name('login');
     Route::post('/authenticate', 'authenticate')->name('authenticate');
@@ -19,6 +19,7 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::post('/logout', 'logout')->name('logout');
 
     Route::get('/users', [UserController::class, 'index']);
+    Route::get('/users/{id}', [UserController::class, 'view']);
     // Route::get('products/create', [UserController::class, 'create']);
     // Route::post('products', [UserController::class, 'store']);
     // Route::get('products/{id}/edit', [UserController::class, 'edit']);

@@ -47,7 +47,7 @@
                                     </td>
                                     <td>
                                         @if(isset($payout->payment->user->username))
-                                        <a href="#" class="text-body">{{ $payout->payment->user->username }}</a>
+                                        <a href="{{ url('/users/' . $payout->payment->user->id) }}" class="text-body">{{ $payout->payment->user->username }}</a>
                                         @endif
                                     </td>
                                     <td>

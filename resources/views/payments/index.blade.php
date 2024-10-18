@@ -45,11 +45,11 @@
                                 <tr>
                                     <td>{{ $payment->id }}</td>
                                     <td>
-                                        <a href="#" class="text-body">{{ $payment->user_id }}</a>
+                                        <a href="{{ url('/users/' . $payment->user_id) }}" class="text-body">{{ $payment->user_id }}</a>
                                     </td>
                                     <td>
                                         @if(isset($payment->user->username))
-                                        <a href="#" class="text-body">{{ $payment->user->username }}</a>
+                                        <a href="{{ url('/users/' . $payment->user_id) }}" class="text-body">{{ $payment->user->username }}</a>
                                         @endif
                                     </td>
                                     <td>

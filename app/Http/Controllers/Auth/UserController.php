@@ -18,13 +18,20 @@ public static function middleware(): array
 {
     return [
         // new Middleware('guest', except: ['home', 'logout']),
-        new Middleware('auth', only: ['index', 'edit', 'update', 'destroy']),
+        new Middleware('auth', only: ['index', 'edit', 'update', 'destroy', 'view']),
     ];
 }
 public function index()
 {
     $users = UsersTg::orderBy('joining_date', 'desc')->paginate(30);
     return view('users.index', compact('users'));
+}
+
+public function view($id)
+{    
+    $user = UsersTg::findOrFail($id);
+
+    return view('users.view',compact('user'));
 }
 
 // public function edit($id)
