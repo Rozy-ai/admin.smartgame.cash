@@ -38,8 +38,9 @@ public function index(Request $request)
 public function show($id)
 {    
     $user = UsersTg::findOrFail($id);
+    $referals = UsersTg::where('inviter_id', $id)->get();
 
-    return view('users.view',compact('user'));
+    return view('users.view',compact('user', 'referals'));
 }
 
 public function edit($id)

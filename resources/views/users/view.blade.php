@@ -30,6 +30,46 @@
             <p><strong>Created At:</strong> {{ $user->joining_date->format('d-m-Y H:i') }}</p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Referals</h4>
+                </div>
+                <div class="card-body">                    
+                    <div class="table-responsive">
+                        <table class="table mb-0">
+
+                            <thead class="table-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Id</th>
+                                    <th>name</th>
+                                    <th>Username</th>
+                                    <th>balance</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($referals as $key => $referal)
+
+                                <tr>
+                                    <th scope="row">{{$key }}</th>
+                                    <td> <a href="{{ url('/users/' . $referal->id) }}">{{ $referal->id }}</a></td>
+                                    <td>{{ $referal->first_name }} {{ $referal->last_name }}</td>
+                                    <td><a href="{{ url('/users/' . $referal->id) }}">{{ $referal->username }}</a></td>
+                                    <td>{{ $referal->balance }}</td>
+                                </tr>
+
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
     <!-- Optionally, add a back button or other links -->
     <a href="/users" class="btn btn-primary mt-3">Вернуться к списку пользователей</a>
