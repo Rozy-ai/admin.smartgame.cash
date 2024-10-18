@@ -19,6 +19,7 @@ class Payout extends Authenticatable
      * @var array<int, string>
      */
     protected $table = 'payouts';
+    protected $primaryKey = 'payout_id';
     protected $fillable = [
         'payout_id',
         'payment_id',

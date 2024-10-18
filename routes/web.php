@@ -28,4 +28,5 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/payments', [PaymentController::class, 'index']);
     Route::get('/payments/{id}', [PaymentController::class, 'view']);
     Route::get('/payouts', [PayoutController::class, 'index']);
+    Route::get('/payouts/{payout_id}', [PayoutController::class, 'view']);
 });

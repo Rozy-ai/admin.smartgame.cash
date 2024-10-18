@@ -25,6 +25,7 @@
                         <table class="table project-list-table table-nowrap align-middle table-borderless">
                             <thead>
                                 <tr>
+                                    <th scope="col" style="width: 200px;">Просмотр</th>
                                     <th scope="col">payout_id</th>
                                     <th scope="col">payment_id</th>
                                     <th scope="col">username</th>
@@ -41,6 +42,13 @@
                             <tbody>
                                 @foreach ($payouts as $payout)
                                 <tr>
+                                    <td>
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="{{ url('/payouts/' . $payout->payout_id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2"><i class="fa fa-eye font-size-18"></i></a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                     <td>{{ $payout->payout_id }}</td>
                                     <td>
                                         <a href="{{ url('/payments/' . $payout->payment_id) }}" class="text-body">{{ $payout->payment_id }}</a>
