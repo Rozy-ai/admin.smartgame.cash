@@ -19,6 +19,7 @@ class UsersTg extends Authenticatable
      * @var array<int, string>
      */
     protected $table = 'users';
+    public $timestamps = false;
     protected $fillable = [
         'id',
         'first_name',

@@ -18,8 +18,9 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/', 'home')->name('home');
     Route::post('/logout', 'logout')->name('logout');
 
-    Route::get('/users', [UserController::class, 'index']);
-    Route::get('/users/{id}', [UserController::class, 'view']);
+    Route::resource('users', UserController::class);
+    // Route::get('/users', [UserController::class, 'index']);
+    // Route::get('/users/{id}', [UserController::class, 'view']);
     // Route::get('products/create', [UserController::class, 'create']);
     // Route::post('products', [UserController::class, 'store']);
     // Route::get('products/{id}/edit', [UserController::class, 'edit']);

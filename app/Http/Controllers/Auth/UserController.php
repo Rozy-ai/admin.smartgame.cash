@@ -18,7 +18,7 @@ public static function middleware(): array
 {
     return [
         // new Middleware('guest', except: ['home', 'logout']),
-        new Middleware('auth', only: ['index', 'edit', 'update', 'destroy', 'view']),
+        new Middleware('auth', only: ['index', 'edit', 'update', 'show']),
     ];
 }
 public function index()
@@ -27,25 +27,27 @@ public function index()
     return view('users.index', compact('users'));
 }
 
-public function view($id)
+public function show($id)
 {    
     $user = UsersTg::findOrFail($id);
 
     return view('users.view',compact('user'));
 }
 
-// public function edit($id)
-// {
-//     $User = UsersTg::findOrFail($id);
-//     return view('users.edit', compact('User'));
-// }
+public function edit($id)
+{
+    $user = UsersTg::findOrFail($id);
+    return view('users.edit', compact('user'));
+}
 
-// public function update(Request $request, $id)
-// {
-//     $User = UsersTg::findOrFail($id);
-//     $User->update($request->all());
-//     return redirect('users')->with('success', 'User updated successfully.');
-// }
+public function update(Request $request, $id): RedirectResponse
+{
+    $user = UsersTg::findOrFail($id);
+    // $user->status = $request->input('status');
+    // $user->save(); 
+    $user->update($request->all());
+    return redirect('users')->with('success', 'баланс обновился');
+}
 
 // public function destroy($id)
 // {

@@ -48,6 +48,9 @@
                                     <td>
                                         <ul class="list-inline mb-0">
                                             <li class="list-inline-item">
+                                                <a href="{{ url('/users/' . $user->id. '/edit') }}" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
                                                 <a href="{{ url('/users/' . $user->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2"><i class="fa fa-eye font-size-18"></i></a>
                                             </li>
                                         </ul>
