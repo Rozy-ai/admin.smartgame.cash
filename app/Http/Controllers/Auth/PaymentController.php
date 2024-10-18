@@ -18,12 +18,19 @@ public static function middleware(): array
 {
     return [
         // new Middleware('guest', except: ['home', 'logout']),
-        new Middleware('auth', only: ['index', 'edit', 'update', 'destroy']),
+        new Middleware('auth', only: ['index', 'edit', 'view', 'update', 'destroy']),
     ];
 }
 public function index()
 {
     $payments = Payment::with('user')->orderBy('id', 'desc')->paginate(30);
     return view('payments.index', compact('payments'));
+}
+
+public function view($id)
+{    
+    $payment = Payment::findOrFail($id);
+
+    return view('payments.view',compact('payment'));
 }
 }

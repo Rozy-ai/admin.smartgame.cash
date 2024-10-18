@@ -26,6 +26,6 @@ Route::controller(LoginRegisterController::class)->group(function() {
     // Route::put('products/{id}', [UserController::class, 'update']);
     // Route::delete('products/{id}', [UserController::class, 'destroy']);
     Route::get('/payments', [PaymentController::class, 'index']);
-
+    Route::get('/payments/{id}', [PaymentController::class, 'view']);
     Route::get('/payouts', [PayoutController::class, 'index']);
 });

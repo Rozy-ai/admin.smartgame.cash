@@ -25,6 +25,7 @@
                         <table class="table project-list-table table-nowrap align-middle table-borderless">
                             <thead>
                                 <tr>
+                                    <th scope="col" style="width: 200px;">Просмотр</th>
                                     <th scope="col">Id</th>
                                     <th scope="col">Username</th>
                                     <th scope="col">F N</th>
@@ -44,6 +45,13 @@
                             <tbody>
                                 @foreach ($users as $user)
                                 <tr>
+                                    <td>
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="{{ url('/users/' . $user->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2"><i class="fa fa-eye font-size-18"></i></a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                     <td>
                                         <a href="{{ url('/users/' . $user->id) }}">{{ $user->id }}</a></td>
                                     <td>

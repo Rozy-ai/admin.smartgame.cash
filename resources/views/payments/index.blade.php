@@ -25,6 +25,7 @@
                         <table class="table project-list-table table-nowrap align-middle table-borderless">
                             <thead>
                                 <tr>
+                                    <th scope="col" style="width: 200px;">Просмотр</th>
                                     <th scope="col">Id</th>
                                     <th scope="col">user_id</th>
                                     <th scope="col">username</th>
@@ -36,13 +37,22 @@
                                     <th scope="col">created_at</th>
                                     <th scope="col">url</th>
                                     <th scope="col">provider</th>
-                                    {{-- <th scope="col" style="width: 200px;">Action</th> --}}
                                   </tr>
                             </thead>
 
                             <tbody>
                                 @foreach ($payments as $payment)
                                 <tr>
+                                    <td>
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a href="{{ url('/payments/' . $payment->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2"><i class="fa fa-eye font-size-18"></i></a>
+                                            </li>
+                                        </ul>
+                                    </td>
                                     <td>{{ $payment->id }}</td>
                                     <td>
                                         <a href="{{ url('/users/' . $payment->user_id) }}" class="text-body">{{ $payment->user_id }}</a>
@@ -64,27 +74,6 @@
                                     <td>{{ $payment->created_at }}</td>
                                     <td>{{ $payment->url }}</td>
                                     <td>{{ $payment->provider }}</td>
-                                        {{-- <td>
-                                        <ul class="list-inline mb-0">
-                                            <li class="list-inline-item">
-                                                <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit" class="px-2 text-primary"><i class="bx bx-pencil font-size-18"></i></a>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <a href="javascript:void(0);" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete" class="px-2 text-danger"><i class="bx bx-trash-alt font-size-18"></i></a>
-                                            </li>
-                                            <li class="list-inline-item dropdown">
-                                                <a class="text-muted dropdown-toggle font-size-18 px-2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true">
-                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                </a>
-                                            
-                                                <div class="dropdown-menu dropdown-menu-end">
-                                                    <a class="dropdown-item" href="#">Action</a>
-                                                    <a class="dropdown-item" href="#">Another action</a>
-                                                    <a class="dropdown-item" href="#">Something else here</a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </td> --}}
                                 </tr>       
                                 @endforeach
                             </tbody>
