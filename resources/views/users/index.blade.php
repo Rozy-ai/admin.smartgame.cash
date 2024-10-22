@@ -75,7 +75,9 @@
                                     <td>
                                         <a href="{{ url('/users/' . $user->id) }}" class="text-body">{{ $user->username }}</a>
                                     </td>
-                                    <td><span class="badge badge-soft-success mb-0">{{ $user->first_name }} {{ $user->last_name }}</span></td>
+                                    <td><span class="badge badge-soft-success mb-0">
+                                        {{ \Illuminate\Support\Str::limit($user->first_name . ' ' . $user->last_name, 25) }}
+                                    </span></td>
                                     <td>{{ $user->score }}</td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $user->balance }}</span></td>
                                     <td>{{ $user->energy }}</td>

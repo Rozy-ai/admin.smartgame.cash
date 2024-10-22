@@ -44,7 +44,7 @@
                                     <th scope="col">status</th>
                                     <th scope="col">created_at</th>
                                     <th scope="col">url</th>
-                                    <th scope="col">provider</th>
+                                    {{-- <th scope="col">provider</th> --}}
                                   </tr>
                             </thead>
 
@@ -72,7 +72,9 @@
                                     </td>
                                     <td>
                                         @if(isset($payment->user->first_name) && isset($payment->user->last_name))
-                                        <span class="badge badge-soft-success mb-0">{{ $payment->user->first_name }} {{ $payment->user->last_name }}</span>
+                                        <span class="badge badge-soft-success mb-0">
+                                            {{ \Illuminate\Support\Str::limit($payment->user->first_name . ' ' . $payment->user->last_name, 25) }}
+                                        </span>
                                         @endif
                                     </td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payment->amount }}</span></td>
@@ -80,8 +82,10 @@
                                     <td>{{ $payment->card_number }}</td>
                                     <td><span class="badge @if($payment->status == 'Completed') badge-soft-success @elseif($payment->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payment->status }}</span></td>
                                     <td>{{ $payment->created_at }}</td>
-                                    <td>{{ $payment->url }}</td>
-                                    <td>{{ $payment->provider }}</td>
+                                    <td>
+                                        {{ \Illuminate\Support\Str::limit($payment->url, 20) }}
+                                    </td>
+                                    {{-- <td>{{ $payment->provider }}</td> --}}
                                 </tr>       
                                 @endforeach
                             </tbody>

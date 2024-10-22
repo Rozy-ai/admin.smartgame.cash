@@ -42,7 +42,7 @@
                                     <th scope="col">amount</th>
                                     <th scope="col">payout_date</th>
                                     <th scope="col">status</th>
-                                    <th scope="col">provider_id</th>
+                                    {{-- <th scope="col">provider_id</th> --}}
                                     {{-- <th scope="col" style="width: 200px;">Action</th> --}}
                                   </tr>
                             </thead>
@@ -71,14 +71,16 @@
                                     </td>
                                     <td>
                                         @if(isset($payout->payment->user->first_name) && isset($payout->payment->user->last_name))
-                                        <span class="badge badge-soft-success mb-0">{{ $payout->payment->user->first_name }} {{ $payout->payment->user->last_name }}</span>
+                                        <span class="badge badge-soft-success mb-0">
+                                            {{ \Illuminate\Support\Str::limit($payout->payment->user->first_name . ' ' . $payout->payment->user->last_name, 25) }}
+                                        </span>
                                         @endif
                                     </td>
                                     <td>{{ $payout->payment->card_number }}</td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payout->amount }}</span></td>
                                     <td>{{ $payout->payout_date }}</td>
                                     <td><span class="badge @if($payout->status == 'Completed') badge-soft-success @elseif($payout->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payout->status }}</span></td>
-                                    <td>{{ $payout->provider }}</td>
+                                    {{-- <td>{{ $payout->provider }}</td> --}}
                                         {{-- <td>
                                         <ul class="list-inline mb-0">
                                             <li class="list-inline-item">

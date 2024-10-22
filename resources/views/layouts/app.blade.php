@@ -19,7 +19,7 @@
     <link href="/assets/css/app.min.css" id="app-style" rel="stylesheet" type="text/css" />
 </head>
 
-    <body data-sidebar="dark">
+    <body data-sidebar="dark" data-layout-mode="dark" data-layout-mode="dark" data-topbar="dark">
         @yield('content')
 
     
