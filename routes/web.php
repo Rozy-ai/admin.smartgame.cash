@@ -18,21 +18,12 @@ Route::controller(LoginRegisterController::class)->group(function() {
     Route::get('/', 'home')->name('home');
     Route::post('/logout', 'logout')->name('logout');
 
+    Route::get('/user-activity', [UserController::class, 'userActivity'])->name('user-activity');
+
     Route::resource('users', UserController::class);
-    // Route::get('/users', [UserController::class, 'index']);
-    // Route::get('/users/{id}', [UserController::class, 'view']);
-    // Route::get('products/create', [UserController::class, 'create']);
-    // Route::post('products', [UserController::class, 'store']);
-    // Route::get('products/{id}/edit', [UserController::class, 'edit']);
-    // Route::put('products/{id}', [UserController::class, 'update']);
-    // Route::delete('products/{id}', [UserController::class, 'destroy']);
 
     Route::resource('payments', PaymentController::class);
-    // Route::get('/payments', [PaymentController::class, 'index']);
-    // Route::get('/payments/{id}', [PaymentController::class, 'view']);
-    // Route::get('payments/{id}/edit', [PaymentController::class, 'edit']);
-    // Route::post('payments/{id}', [PaymentController::class, 'update']);
+
     Route::resource('payouts', PayoutController::class);
-    // Route::get('/payouts', [PayoutController::class, 'index']);
-    // Route::get('/payouts/{payout_id}', [PayoutController::class, 'view']);
+
 });

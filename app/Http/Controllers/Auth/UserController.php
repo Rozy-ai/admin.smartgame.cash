@@ -10,6 +10,7 @@ use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Carbon;
 
 class UserController extends Controller implements HasMiddleware
 {
@@ -56,6 +57,69 @@ public function update(Request $request, $id): RedirectResponse
     // $user->save(); 
     $user->update($request->all());
     return redirect('users')->with('success', 'баланс обновился');
+}
+
+public function userActivity(Request $request)
+{
+    $filter = $request->query('filter', 'monthly'); // Default to 'monthly'
+    $userCounts = [];
+    $labels = [];
+    $totalUsers = 0;
+
+    switch ($filter) {
+        case 'daily':
+            // Today’s user activity
+            $totalUsers = UsersTg::whereDate('joining_date', Carbon::today())->count();
+            $userCounts = UsersTg::selectRaw('HOUR(FROM_UNIXTIME(joining_date)) as hour, COUNT(*) as count')
+                ->whereDate('joining_date', Carbon::today())
+                ->groupBy('hour')
+                ->pluck('count', 'hour')
+                ->toArray();
+            $labels = range(0, 23); // 24 hours
+            break;
+
+        case 'weekly':
+            // Last 7 days user activity
+            $totalUsers = UsersTg::whereBetween('joining_date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
+            $userCounts = UsersTg::selectRaw('DAYOFWEEK(FROM_UNIXTIME(joining_date)) as day, COUNT(*) as count')
+                ->whereBetween('joining_date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])
+                ->groupBy('day')
+                ->pluck('count', 'day')
+                ->toArray();
+            $labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            break;
+
+        case 'monthly':
+            // Last 30 days user activity
+            $totalUsers = UsersTg::whereMonth('joining_date', Carbon::now()->month)->count();
+            $userCounts = UsersTg::selectRaw('DAY(FROM_UNIXTIME(joining_date)) as day, COUNT(*) as count')
+                ->whereMonth('joining_date', Carbon::now()->month)
+                ->groupBy('day')
+                ->pluck('count', 'day')
+                ->toArray();
+            $labels = range(1, Carbon::now()->daysInMonth); // Days in the current month
+            break;
+
+        case 'yearly':
+            // This year’s user activity
+            $totalUsers = UsersTg::whereYear('joining_date', Carbon::now()->year)->count();
+            $userCounts = UsersTg::selectRaw('MONTH(FROM_UNIXTIME(joining_date)) as month, COUNT(*) as count')
+                ->whereYear('joining_date', Carbon::now()->year)
+                ->groupBy('month')
+                ->pluck('count', 'month')
+                ->toArray();
+            $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            break;
+    }
+
+    // Ensure there are values for each label
+    $userCounts = array_replace(array_fill_keys($labels, 0), $userCounts);
+
+    return response()->json([
+        'totalUsers' => $totalUsers,
+        'userCounts' => array_values($userCounts),
+        'labels' => $labels,
+    ]);
 }
 
 // public function destroy($id)
