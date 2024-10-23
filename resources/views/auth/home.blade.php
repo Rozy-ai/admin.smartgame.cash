@@ -51,7 +51,7 @@
                                         <h4 class="mb-0">{{$currentMonthUsers}}</h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end ms-2">
-                                        <div class="badge rounded-pill font-size-13 badge-soft-danger"> {{$percentChangeUsers}}%
+                                        <div class="badge rounded-pill font-size-13 badge-soft-success"> {{$percentChangeUsers}}%
                                         </div>
                                     </div>
                                 </div>
@@ -77,7 +77,7 @@
                                         <h4 class="mb-0">{{$currentMonthPayouts}}</h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end ms-2">
-                                        <div class="badge rounded-pill font-size-13 badge-soft-danger">{{$percentChangePayouts}}%
+                                        <div class="badge rounded-pill font-size-13 badge-soft-success">{{$percentChangePayouts}}%
                                         </div>
                                     </div>
                                 </div>

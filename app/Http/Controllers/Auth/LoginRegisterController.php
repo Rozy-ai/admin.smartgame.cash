@@ -78,6 +78,12 @@ class LoginRegisterController extends Controller implements HasMiddleware
     
     public function home(): View
     {
+        $currentMonth = Carbon::now()->month;
+        $currentYear = Carbon::now()->year;
+
+        $lastMonth = Carbon::now()->subMonth()->month;
+        $lastMonthYear = Carbon::now()->subMonth()->year;
+
         $currentMonthAmount = Payment::where('status', 'Completed')
         ->whereMonth('created_at', Carbon::now()->month)
         ->whereYear('created_at', Carbon::now()->year)
@@ -96,25 +102,23 @@ class LoginRegisterController extends Controller implements HasMiddleware
             $percentChange = $currentMonthAmount > 0 ? 100 : 0;
         }
 
-        $currentMonthUsers = UsersTg::
-        whereMonth('joining_date', Carbon::now()->month)
-        ->whereYear('joining_date', Carbon::now()->year)
+        $currentMonthUsers = UsersTg::whereRaw('FROM_UNIXTIME(joining_date, "%Y") = ?', [$currentYear])
+        ->whereRaw('FROM_UNIXTIME(joining_date, "%m") = ?', [$currentMonth])
         ->count();
+
+        $lastMonthUsers = UsersTg::whereRaw('FROM_UNIXTIME(joining_date, "%Y") = ?', [$lastMonthYear])
+        ->whereRaw('FROM_UNIXTIME(joining_date, "%m") = ?', [$lastMonth])
+        ->count();
+   
     
-        // Total amount for last month
-        $lastMonthUsers = UsersTg::
-            whereMonth('joining_date', Carbon::now()->subMonth()->month)
-            ->whereYear('joining_date', Carbon::now()->subMonth()->year)
-            ->count();
-
-            // Calculate percentage change
-        if ($lastMonthAmount > 0) {
-            $percentChangeUsers = (($currentMonthAmount - $lastMonthAmount) / $lastMonthAmount) * 100;
+        // Calculate percentage change
+        if ($lastMonthUsers > 0) {
+            $percentChangeUsers = (($currentMonthUsers - $lastMonthUsers) / $lastMonthUsers) * 100;
         } else {
-            // If the last month's amount is 0, percentage change is undefined
-            $percentChangeUsers = $currentMonthAmount > 0 ? 100 : 0;
+            $percentChangeUsers = $currentMonthUsers > 0 ? 100 : 0;
         }
-
+        $percentChangeUsers = number_format($percentChangeUsers, 2);
+        
         $currentMonthPayouts = Payout::where('status', 'Completed')
         ->whereMonth('payout_date', Carbon::now()->month)
         ->whereYear('payout_date', Carbon::now()->year)
