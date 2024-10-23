@@ -863,7 +863,121 @@
             <script src="/assets/js/app.js"></script>
     
             <script src="/assets/js/pages/pass-addon.init.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    let chartPayment = null; 
+                    let chartUsers = null; // Переменная для хранения объекта графика пользователей
+                
+                    // Default filter is monthly
+                    loadPaymentData('monthly');
+                    loadUserData('monthly');
+                
+                    // Event listener for the payment filter dropdown
+                    // document.querySelectorAll('.payment-filter-option').forEach(function (element) {
+                    //     element.addEventListener('click', function () {
+                    //         const filterType = this.getAttribute('data-type');
+                    //         document.querySelector('.payment-dropdown-toggle .text-muted').textContent = capitalizeFirstLetter(filterType);
+                    //         loadPaymentData(filterType);
+                    //     });
+                    // });
 
+                    document.querySelectorAll('.payment-dropdown-item').forEach(function (element) {
+                    element.addEventListener('click', function () {
+                        const filterType = this.textContent.trim().toLowerCase();
+                        document.querySelector('.payment-dropdown-toggle .text-muted').textContent = filterType.charAt(0).toUpperCase() + filterType.slice(1);
+                        loadPaymentData(filterType);
+                    });
+                });
+                
+                    // Event listener for the user activity filter dropdown
+                    document.querySelectorAll('.user-filter-option').forEach(function (element) {
+                        element.addEventListener('click', function () {
+                            const filterType = this.getAttribute('data-type');
+                            document.getElementById('filter-type').textContent = capitalizeFirstLetter(filterType);
+                            loadUserData(filterType);
+                        });
+                    });
+                
+                    function loadPaymentData(filter) {
+                        fetch(`/payment-data?filter=${filter}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (chartPayment) {
+                                    chartPayment.updateSeries([{
+                                        name: 'Payments',
+                                        data: data.amounts
+                                    }]);
+                                    chartPayment.updateOptions({
+                                        xaxis: {
+                                            categories: data.labels
+                                        }
+                                    });
+                                } else {
+                                    var options = {
+                                        series: [{
+                                            name: 'Payments',
+                                            data: data.amounts
+                                        }],
+                                        chart: {
+                                            type: 'bar',
+                                            height: 350
+                                        },
+                                        xaxis: {
+                                            categories: data.labels
+                                        },
+                                        colors: ['#3b76e1']
+                                    };
+                                    chartPayment = new ApexCharts(document.querySelector("#chart-column-new"), options);
+                                    chartPayment.render();
+                                }
+                            });
+                    }
+                
+                    function loadUserData(filter) {
+                        fetch(`/user-activity?filter=${filter}`)
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById('total-users').textContent = data.totalUsers;
+                
+                                if (chartUsers) {
+                                    chartUsers.updateSeries([{
+                                        name: 'Users',
+                                        data: data.userCounts
+                                    }]);
+                                    chartUsers.updateOptions({
+                                        xaxis: {
+                                            categories: data.labels
+                                        }
+                                    });
+                                } else {
+                                    var options = {
+                                        series: [{
+                                            name: 'Users',
+                                            data: data.userCounts
+                                        }],
+                                        chart: {
+                                            type: 'area',
+                                            height: 350,
+                                            toolbar: {
+                                                show: false
+                                            }
+                                        },
+                                        xaxis: {
+                                            categories: data.labels
+                                        },
+                                        colors: ['#3b76e1'],
+                                    };
+                                    chartUsers = new ApexCharts(document.querySelector("#chart-area-new"), options);
+                                    chartUsers.render();
+                                }
+                            });
+                    }
+                
+                    function capitalizeFirstLetter(string) {
+                        return string.charAt(0).toUpperCase() + string.slice(1);
+                    }
+                });
+                </script>
 
         </body>
 </html>

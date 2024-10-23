@@ -68,48 +68,94 @@ public function userActivity(Request $request)
 
     switch ($filter) {
         case 'daily':
-            // Today’s user activity
-            $totalUsers = UsersTg::whereDate('joining_date', Carbon::today())->count();
+            // Today's user activity
+            $today = Carbon::today();
+        
+            // Total users registered today
+            $totalUsers = UsersTg::whereRaw('DATE(FROM_UNIXTIME(joining_date)) = ?', [$today->format('Y-m-d')])->count();
+        
+            // User counts grouped by hour
             $userCounts = UsersTg::selectRaw('HOUR(FROM_UNIXTIME(joining_date)) as hour, COUNT(*) as count')
-                ->whereDate('joining_date', Carbon::today())
+                ->whereRaw('DATE(FROM_UNIXTIME(joining_date)) = ?', [$today->format('Y-m-d')])
                 ->groupBy('hour')
                 ->pluck('count', 'hour')
                 ->toArray();
-            $labels = range(0, 23); // 24 hours
+        
+            // Labels for 24 hours (0-23)
+            $labels = range(0, 23);
+        
+            // Ensure all 24 hours are represented with a count (0 if no users registered during that hour)
+            $userCounts = array_merge(array_fill_keys($labels, 0), $userCounts);
+        
             break;
 
-        case 'weekly':
-            // Last 7 days user activity
-            $totalUsers = UsersTg::whereBetween('joining_date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])->count();
-            $userCounts = UsersTg::selectRaw('DAYOFWEEK(FROM_UNIXTIME(joining_date)) as day, COUNT(*) as count')
-                ->whereBetween('joining_date', [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()])
-                ->groupBy('day')
-                ->pluck('count', 'day')
-                ->toArray();
-            $labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-            break;
+            case 'weekly':
+                // Last 7 days user activity
+                $startOfWeek = Carbon::now()->startOfWeek(); // Start of the week (Monday)
+                $endOfWeek = Carbon::now()->endOfWeek();     // End of the week (Sunday)
+            
+                // Total users for the current week
+                $totalUsers = UsersTg::whereBetween(
+                    'joining_date',
+                    [Carbon::createFromTimestamp($startOfWeek->timestamp), Carbon::createFromTimestamp($endOfWeek->timestamp)]
+                )->count();
+            
+                // User counts grouped by day of the week
+                $userCounts = UsersTg::selectRaw('DAYOFWEEK(FROM_UNIXTIME(joining_date)) as day, COUNT(*) as count')
+                    ->whereRaw('FROM_UNIXTIME(joining_date) BETWEEN ? AND ?', [$startOfWeek, $endOfWeek])
+                    ->groupBy('day')
+                    ->pluck('count', 'day')
+                    ->toArray();
+            
+                // Labels for days of the week (1 = Sun, 2 = Mon, ..., 7 = Sat)
+                $labels = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            
+                // Ensure all days of the week are represented
+                $userCounts = array_merge(array_fill_keys([1, 2, 3, 4, 5, 6, 7], 0), $userCounts);
+            
+                break;
 
         case 'monthly':
             // Last 30 days user activity
-            $totalUsers = UsersTg::whereMonth('joining_date', Carbon::now()->month)->count();
+            $currentMonth = Carbon::now()->month;
+            $currentYear = Carbon::now()->year;
+    
+            $totalUsers = UsersTg::whereRaw('FROM_UNIXTIME(joining_date, "%Y") = ?', [$currentYear])
+            ->whereRaw('FROM_UNIXTIME(joining_date, "%m") = ?', [$currentMonth])
+            ->count();
+    
+
             $userCounts = UsersTg::selectRaw('DAY(FROM_UNIXTIME(joining_date)) as day, COUNT(*) as count')
-                ->whereMonth('joining_date', Carbon::now()->month)
-                ->groupBy('day')
-                ->pluck('count', 'day')
-                ->toArray();
+            ->whereRaw('MONTH(FROM_UNIXTIME(joining_date)) = ?', [Carbon::now()->month])
+            ->groupBy('day')
+            ->pluck('count', 'day')
+            ->toArray();
+              
             $labels = range(1, Carbon::now()->daysInMonth); // Days in the current month
+       
             break;
 
-        case 'yearly':
-            // This year’s user activity
-            $totalUsers = UsersTg::whereYear('joining_date', Carbon::now()->year)->count();
-            $userCounts = UsersTg::selectRaw('MONTH(FROM_UNIXTIME(joining_date)) as month, COUNT(*) as count')
-                ->whereYear('joining_date', Carbon::now()->year)
-                ->groupBy('month')
-                ->pluck('count', 'month')
-                ->toArray();
-            $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-            break;
+            case 'yearly':
+                // This year's user activity
+                $currentYear = Carbon::now()->year;
+            
+                // Total users registered this year
+                $totalUsers = UsersTg::whereRaw('YEAR(FROM_UNIXTIME(joining_date)) = ?', [$currentYear])->count();
+            
+                // User counts grouped by month
+                $userCounts = UsersTg::selectRaw('MONTH(FROM_UNIXTIME(joining_date)) as month, COUNT(*) as count')
+                    ->whereRaw('YEAR(FROM_UNIXTIME(joining_date)) = ?', [$currentYear])
+                    ->groupBy('month')
+                    ->pluck('count', 'month')
+                    ->toArray();
+            
+                // Labels for 12 months
+                $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            
+                // Ensure all months are represented with a count (0 if no users registered during that month)
+                $userCounts = array_merge(array_fill_keys(range(1, 12), 0), $userCounts);
+            
+                break;
     }
 
     // Ensure there are values for each label

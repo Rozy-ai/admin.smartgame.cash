@@ -20,6 +20,8 @@ Route::controller(LoginRegisterController::class)->group(function() {
 
     Route::get('/user-activity', [UserController::class, 'userActivity'])->name('user-activity');
 
+    Route::get('/payment-data', [PaymentController::class, 'getPaymentData']);
+
     Route::resource('users', UserController::class);
 
     Route::resource('payments', PaymentController::class);
