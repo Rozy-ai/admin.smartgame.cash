@@ -131,7 +131,11 @@ public function userActivity(Request $request)
             ->pluck('count', 'day')
             ->toArray();
               
-            $labels = range(1, Carbon::now()->daysInMonth); // Days in the current month
+            $labels = [];
+            for ($day = 1; $day <= Carbon::now()->daysInMonth; $day++) {
+                $labels[] = Carbon::createFromDate($currentYear, $currentMonth, $day)->format('M d');
+            }
+            $userCounts = array_replace(array_fill_keys(range(1, Carbon::now()->daysInMonth), 0), $userCounts);
        
             break;
 
@@ -157,7 +161,7 @@ public function userActivity(Request $request)
  
                 break;
     }
-    if($filter !== 'yearly'){
+    if($filter !== 'yearly' && $filter !== 'monthly' ){
             // Ensure there are values for each label
      $userCounts = array_replace(array_fill_keys($labels, 0), $userCounts);
     }

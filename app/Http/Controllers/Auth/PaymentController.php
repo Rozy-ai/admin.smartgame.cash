@@ -85,21 +85,30 @@ public function getPaymentData(Request $request)
             $amounts = array_values($data);
             break;
 
-        case 'monthly':
-            // Группировка данных по дням текущего месяца
-            $data = Payment::where('status', 'Completed')
-                ->whereMonth('created_at', Carbon::now()->month)
-                ->whereYear('created_at', Carbon::now()->year)
-                ->selectRaw('DAY(created_at) as day, SUM(amount) as total')
-                ->groupBy('day')
-                ->pluck('total', 'day')
-                ->toArray();
-            $labels = range(1, Carbon::now()->daysInMonth);
-            $amounts = [];
-            foreach ($labels as $label) {
-                $amounts[] = $data[$label] ?? 0;
-            }
-            break;
+            case 'monthly':
+                // Группировка данных по дням текущего месяца
+                $data = Payment::where('status', 'Completed')
+                    ->whereMonth('created_at', Carbon::now()->month)
+                    ->whereYear('created_at', Carbon::now()->year)
+                    ->selectRaw('DAY(created_at) as day, SUM(amount) as total')
+                    ->groupBy('day')
+                    ->pluck('total', 'day')
+                    ->toArray();
+            
+                // Создаем метки для дней текущего месяца в формате M d
+                $labels = [];
+                for ($day = 1; $day <= Carbon::now()->daysInMonth; $day++) {
+                    $labels[] = Carbon::createFromDate(Carbon::now()->year, Carbon::now()->month, $day)->format('M d');
+                }
+            
+                // Убедитесь, что все дни представлены в $data
+                $amounts = [];
+                foreach ($labels as $day) {
+                    // Извлекаем номер дня из метки, чтобы найти соответствующую сумму
+                    $dayNumber = (int) Carbon::createFromFormat('M d', $day)->day;
+                    $amounts[] = $data[$dayNumber] ?? 0; // Используем 0, если сумма не найдена
+                }
+                break;
 
         case 'weekly':
             // Группировка данных по дням недели
