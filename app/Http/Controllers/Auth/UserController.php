@@ -144,22 +144,24 @@ public function userActivity(Request $request)
             
                 // User counts grouped by month
                 $userCounts = UsersTg::selectRaw('MONTH(FROM_UNIXTIME(joining_date)) as month, COUNT(*) as count')
-                    ->whereRaw('YEAR(FROM_UNIXTIME(joining_date)) = ?', [$currentYear])
-                    ->groupBy('month')
-                    ->pluck('count', 'month')
-                    ->toArray();
-            
+                ->whereRaw('YEAR(FROM_UNIXTIME(joining_date)) = ?', [$currentYear])
+                ->groupBy('month')
+                ->pluck('count', 'month')
+                ->toArray();
+               
                 // Labels for 12 months
                 $labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
             
                 // Ensure all months are represented with a count (0 if no users registered during that month)
-                $userCounts = array_merge(array_fill_keys(range(1, 12), 0), $userCounts);
-            
+                $userCounts = array_replace(array_fill_keys(range(1, 12), 0), $userCounts);
+ 
                 break;
     }
+    if($filter !== 'yearly'){
+            // Ensure there are values for each label
+     $userCounts = array_replace(array_fill_keys($labels, 0), $userCounts);
+    }
 
-    // Ensure there are values for each label
-    $userCounts = array_replace(array_fill_keys($labels, 0), $userCounts);
 
     return response()->json([
         'totalUsers' => $totalUsers,

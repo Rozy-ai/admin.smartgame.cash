@@ -117,7 +117,7 @@ public function getPaymentData(Request $request)
             $amounts = array_values($data);
             break;
 
-        case 'daily':
+        case 'today':
             // Группировка данных по часам дня
             $data = Payment::where('status', 'Completed')
             ->whereDate('created_at', Carbon::today())
