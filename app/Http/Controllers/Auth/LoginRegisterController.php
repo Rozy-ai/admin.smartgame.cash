@@ -3,7 +3,10 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Payment;
+use App\Models\Payout;
 use App\Models\User;
+use App\Models\UsersTg;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -11,6 +14,7 @@ use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Carbon\Carbon;
 
 class LoginRegisterController extends Controller implements HasMiddleware
 {
@@ -74,7 +78,70 @@ class LoginRegisterController extends Controller implements HasMiddleware
     
     public function home(): View
     {
-        return view('auth.home');
+        $currentMonthAmount = Payment::where('status', 'Completed')
+        ->whereMonth('created_at', Carbon::now()->month)
+        ->whereYear('created_at', Carbon::now()->year)
+        ->sum('amount');
+    
+        // Total amount for last month
+        $lastMonthAmount = Payment::where('status', 'Completed')
+            ->whereMonth('created_at', Carbon::now()->subMonth()->month)
+            ->whereYear('created_at', Carbon::now()->subMonth()->year)
+            ->sum('amount');
+            // Calculate percentage change
+        if ($lastMonthAmount > 0) {
+            $percentChange = (($currentMonthAmount - $lastMonthAmount) / $lastMonthAmount) * 100;
+        } else {
+            // If the last month's amount is 0, percentage change is undefined
+            $percentChange = $currentMonthAmount > 0 ? 100 : 0;
+        }
+
+        $currentMonthUsers = UsersTg::
+        whereMonth('joining_date', Carbon::now()->month)
+        ->whereYear('joining_date', Carbon::now()->year)
+        ->count();
+    
+        // Total amount for last month
+        $lastMonthUsers = UsersTg::
+            whereMonth('joining_date', Carbon::now()->subMonth()->month)
+            ->whereYear('joining_date', Carbon::now()->subMonth()->year)
+            ->count();
+
+            // Calculate percentage change
+        if ($lastMonthAmount > 0) {
+            $percentChangeUsers = (($currentMonthAmount - $lastMonthAmount) / $lastMonthAmount) * 100;
+        } else {
+            // If the last month's amount is 0, percentage change is undefined
+            $percentChangeUsers = $currentMonthAmount > 0 ? 100 : 0;
+        }
+
+        $currentMonthPayouts = Payout::where('status', 'Completed')
+        ->whereMonth('payout_date', Carbon::now()->month)
+        ->whereYear('payout_date', Carbon::now()->year)
+        ->sum('amount');
+    
+        // Total amount for last month
+        $lastMonthPayouts = Payment::where('status', 'Completed')
+            ->whereMonth('created_at', Carbon::now()->subMonth()->month)
+            ->whereYear('created_at', Carbon::now()->subMonth()->year)
+            ->sum('amount');
+            // Calculate percentage change
+        if ($lastMonthPayouts > 0) {
+            $percentChangePayouts = (($currentMonthPayouts - $lastMonthPayouts) / $lastMonthPayouts) * 100;
+        } else {
+            // If the last month's amount is 0, percentage change is undefined
+            $percentChangePayouts = $currentMonthPayouts > 0 ? 100 : 0;
+        }
+
+
+        return view('auth.home',compact(
+            'currentMonthAmount',
+            'percentChange',
+            'currentMonthUsers',
+            'percentChangeUsers',
+            'currentMonthPayouts',
+            'percentChangePayouts'
+         ));
     } 
     
     public function logout(Request $request): RedirectResponse

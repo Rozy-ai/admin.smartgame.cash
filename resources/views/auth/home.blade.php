@@ -20,38 +20,12 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="text-muted mb-1">Revenue</p>
-                                        <h4 class="mb-0">$21,456</h4>
+                                        <p class="text-muted mb-1">Платежи в этот месяц</p>
+                                        <h4 class="mb-0">₸ {{ $currentMonthAmount }}</h4>
                                     </div>
 
                                     <div class="flex-shrink-0 align-self-end ms-2">
-                                        <div class="badge rounded-pill font-size-13 badge-soft-success">+ 2.65%
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end card body -->
-                        </div>
-                        <!-- end card -->
-                    </div>
-                    <!-- end col -->
-                    <div class="col-xl-4 col-lg-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0 me-3">
-                                        <div class="avatar">
-                                            <div class="avatar-title rounded bg-primary bg-gradient">
-                                                <i data-eva="shopping-bag" class="fill-white"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <p class="text-muted mb-1">Orders</p>
-                                        <h4 class="mb-0">5,643</h4>
-                                    </div>
-                                    <div class="flex-shrink-0 align-self-end ms-2">
-                                        <div class="badge rounded-pill font-size-13 badge-soft-danger">- 0.82%
+                                        <div class="badge rounded-pill font-size-13 badge-soft-success">+ {{$percentChange}}%
                                         </div>
                                     </div>
                                 </div>
@@ -73,11 +47,37 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="text-muted mb-1">Customers</p>
-                                        <h4 class="mb-0">45,254</h4>
+                                        <p class="text-muted mb-1">Регистрации</p>
+                                        <h4 class="mb-0">{{$currentMonthUsers}}</h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end ms-2">
-                                        <div class="badge rounded-pill font-size-13 badge-soft-danger">- 1.04%
+                                        <div class="badge rounded-pill font-size-13 badge-soft-danger"> {{$percentChangeUsers}}%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- end col -->
+                    <div class="col-xl-4 col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center">
+                                    <div class="flex-shrink-0 me-3">
+                                        <div class="avatar">
+                                            <div class="avatar-title rounded bg-primary bg-gradient">
+                                                <i data-eva="shopping-bag" class="fill-white"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <p class="text-muted mb-1">Выплаты в этот месяц</p>
+                                        <h4 class="mb-0">{{$currentMonthPayouts}}</h4>
+                                    </div>
+                                    <div class="flex-shrink-0 align-self-end ms-2">
+                                        <div class="badge rounded-pill font-size-13 badge-soft-danger">{{$percentChangePayouts}}%
                                         </div>
                                     </div>
                                 </div>
@@ -88,6 +88,7 @@
                     </div>
                     <!-- end col -->
                 </div>
+
                 <!-- end row -->
             </div>
             <!-- end col -->
