@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1">
-                                        <p class="text-muted mb-1">Регистрации в этот месяц</p>
+                                        <p class="text-muted mb-1">Регистрации в месяц</p>
                                         <h4 class="mb-0">{{$currentMonthUsers}}</h4>
                                     </div>
                                     <div class="flex-shrink-0 align-self-end ms-2">
