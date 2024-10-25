@@ -150,7 +150,7 @@
                                         
                                                     <div>
                                                         <p class="text-muted mb-1" id="filter-label">This Month</p>
-                                                        <h4 id="total-users">{{$currentMonthUsers}}</h4>
+                                                        <h4 id="total-users">{{ number_format($currentMonthUsers, 0, '.', ',') }}</h4>
                                                     </div>
                                         
                                                     <div class="m-n3">

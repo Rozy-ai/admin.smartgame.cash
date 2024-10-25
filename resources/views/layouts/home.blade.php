@@ -899,45 +899,105 @@
                     });
                 
                     function loadPaymentData(filter) {
-                        fetch(`/payment-data?filter=${filter}`)
-                            .then(response => response.json())
-                            .then(data => {
-                                if (chartPayment) {
-                                    chartPayment.updateSeries([{
-                                        name: 'Payments',
-                                        data: data.amounts
-                                    }]);
-                                    chartPayment.updateOptions({
-                                        xaxis: {
-                                            categories: data.labels
-                                        }
-                                    });
-                                } else {
-                                    var options = {
-                                        series: [{
-                                            name: 'Payments',
-                                            data: data.amounts
-                                        }],
-                                        chart: {
-                                            type: 'bar',
-                                            height: 350
-                                        },
-                                        xaxis: {
-                                            categories: data.labels
-                                        },
-                                        colors: ['#3b76e1']
-                                    };
-                                    chartPayment = new ApexCharts(document.querySelector("#chart-column-new"), options);
-                                    chartPayment.render();
-                                }
-                            });
+    fetch(`/payment-data?filter=${filter}`)
+        .then(response => response.json())
+        .then(data => {
+            // Отформатированные данные для отображения
+            const formattedData = data.amounts.map(amount => Number(amount).toLocaleString('en-US', {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }));
+
+            if (chartPayment) {
+                chartPayment.updateSeries([{
+                    name: 'Payments',
+                    data: data.amounts
+                }]);
+                chartPayment.updateOptions({
+                    xaxis: {
+                        categories: data.labels
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: function (val) {
+                                return val.toLocaleString('en-US', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                });
+                            }
+                        }
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        formatter: function (val, opts) {
+                            if(val != 0){
+                                return formattedData[opts.dataPointIndex];
+                            } 
+                        }
                     }
+                });
+            } else {
+                var options = {
+                    series: [{
+                        name: 'Payments',
+                        data: data.amounts // Оригинальные данные для построения графика
+                    }],
+                    chart: {
+                        type: 'bar',
+                        height: 350
+                    },
+                    xaxis: {
+                        categories: data.labels
+                    },
+                    yaxis: {
+                        labels: {
+                            formatter: function (val) {
+                                return val.toLocaleString('en-US', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                });
+                            }
+                        }
+                    },
+                    colors: ['#3b76e1'],
+                    dataLabels: {
+                        enabled: true, // Включаем отображение значений на графике
+                        formatter: function (val, opts) {
+                            if(val != 0){
+                                return formattedData[opts.dataPointIndex];
+                            } 
+                        }
+                    },
+                    tooltip: {
+                        y: {
+                            formatter: function (val) {
+                                return val.toLocaleString('en-US', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                });
+                            }
+                        }
+                    }
+                };
+                chartPayment = new ApexCharts(document.querySelector("#chart-column-new"), options);
+                chartPayment.render();
+            }
+        });
+}
                 
                     function loadUserData(filter) {
                         fetch(`/user-activity?filter=${filter}`)
                             .then(response => response.json())
                             .then(data => {
-                                document.getElementById('total-users').textContent = data.totalUsers;
+                                 // Отформатированные данные для отображения
+                                const formattedData = data.userCounts.map(userCount => Number(userCount).toLocaleString('en-US', {
+                                    minimumFractionDigits: 2,
+                                    maximumFractionDigits: 2
+                                }));
+                                document.getElementById('total-users').textContent = data.totalUsers.toLocaleString('en-US', {
+                                                        minimumFractionDigits: 2,
+                                                        maximumFractionDigits: 2
+                                                    });
                 
                                 if (chartUsers) {
                                     chartUsers.updateSeries([{
@@ -947,7 +1007,25 @@
                                     chartUsers.updateOptions({
                                         xaxis: {
                                             categories: data.labels
+                                        },
+                                        yaxis: {
+                                            labels: {
+                                                formatter: function (val) {
+                                                    return val.toLocaleString('en-US', {
+                                                        minimumFractionDigits: 2,
+                                                        maximumFractionDigits: 2
+                                                    });
+                                                }
+                                            }
+                                        },
+                                        dataLabels: {
+                                        enabled: true,
+                                        formatter: function (val, opts) {
+                                            if(val != 0){
+                                                return formattedData[opts.dataPointIndex];
+                                            } 
                                         }
+                                    }
                                     });
                                 } else {
                                     var options = {
@@ -965,7 +1043,25 @@
                                         xaxis: {
                                             categories: data.labels
                                         },
+                                        yaxis: {
+                                            labels: {
+                                                formatter: function (val) {
+                                                    return val.toLocaleString('en-US', {
+                                                        minimumFractionDigits: 2,
+                                                        maximumFractionDigits: 2
+                                                    });
+                                                }
+                                            }
+                                        },
                                         colors: ['#3b76e1'],
+                                        dataLabels: {
+                                            enabled: true, // Включаем отображение значений на графике
+                                            formatter: function (val, opts) {
+                                                if(val != 0){
+                                                    return formattedData[opts.dataPointIndex];
+                                                } 
+                                            }
+                                        },
                                     };
                                     chartUsers = new ApexCharts(document.querySelector("#chart-area-new"), options);
                                     chartUsers.render();
