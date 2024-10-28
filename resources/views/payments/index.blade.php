@@ -71,7 +71,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        @if(isset($payment->user->first_name) && isset($payment->user->last_name))
+                                        @if(isset($payment->user->first_name) || isset($payment->user->last_name))
                                         <span class="badge badge-soft-success mb-0">
                                             {{ \Illuminate\Support\Str::limit($payment->user->first_name . ' ' . $payment->user->last_name, 25) }}
                                         </span>
