@@ -36,6 +36,7 @@
                                     <th scope="col" style="width: 200px;">Просмотр</th>
                                     <th scope="col">payout_id</th>
                                     <th scope="col">payment_id</th>
+                                    <th scope="col">user id</th>
                                     <th scope="col">username</th>
                                     <th scope="col">F N</th>
                                     <th scope="col">card_number</th>
@@ -63,6 +64,11 @@
                                     <td>{{ $payout->payout_id }}</td>
                                     <td>
                                         <a href="{{ url('/payments/' . $payout->payment_id) }}" class="text-body">{{ $payout->payment_id }}</a>
+                                    </td>
+                                    <td>
+                                        @if(isset($payout->payment->user_id))
+                                        <a href="{{ url('/users/' . $payout->payment->user_id) }}" class="text-body">{{ $payout->payment->user_id }}</a>
+                                        @endif
                                     </td>
                                     <td>
                                         @if(isset($payout->payment->user->username))
