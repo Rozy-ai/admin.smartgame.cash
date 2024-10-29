@@ -76,7 +76,11 @@
                                         </span>
                                         @endif
                                     </td>
-                                    <td>{{ optional($payout->payment->card_number) ?? 'No card number available' }}</td>
+                                    <td>
+                                        @if(isset($payout->payment->card_number))
+                                        {{ $payout->payment->card_number }}
+                                    @endif
+                                    </td>
                                     <td><span class="badge badge-soft-success mb-0">{{ $payout->amount }}</span></td>
                                     <td>{{ $payout->payout_date }}</td>
                                     <td><span class="badge @if($payout->status == 'Completed') badge-soft-success @elseif($payout->status == 'Failed') badge-soft-warning @else  badge-soft-info @endif  mb-0">{{ $payout->status }}</span></td>
