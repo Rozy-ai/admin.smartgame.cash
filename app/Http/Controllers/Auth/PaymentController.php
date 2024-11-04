@@ -25,7 +25,11 @@ public static function middleware(): array
 public function index(Request $request)
 {
     $search = $request->input('search');
+    $status = $request->input('status', 'completed');
     $payments = Payment::query()
+    ->when($status, function ($query, $status) {
+        return $query->where('status', $status);
+    })
     ->when($search, function ($query, $search) {
         return $query->where('card_number', 'like', "%{$search}%")
                     ->orWhereHas('user', function($query) use ($search) {

@@ -19,6 +19,17 @@
                 <div class="col-lg-2 p-0" style="margin-left: -60px;">
                     <button type="submit" class="btn btn-primary">Поиск</button>
                 </div>
+                <div class="offset-lg-4 col-lg-2">
+                    <div class="form-group">
+                        <select name="status" class="form-control" onchange="this.form.submit()">
+                            <option value="Completed" {{ request('status') === 'Completed' ? 'selected' : '' }}>Completed</option>
+                            <option value="Pending" {{ request('status') === 'Pending' ? 'selected' : '' }}>Pending</option>
+                            <option value="Failed" {{ request('status') === 'Failed' ? 'selected' : '' }}>Failed</option>
+                            <option value="Refunded" {{ request('status') === 'Refunded' ? 'selected' : '' }}>Refunded</option>
+                        </select>
+                    </div>
+                </div>
+            
             </div>
             </form>
         </div>
