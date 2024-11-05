@@ -131,7 +131,7 @@
             </div>
         </div>
         <!-- end row -->
-        {{ $payouts->links() }}
+        {{ $payments->appends(request()->input())->links() }}
         {{-- <div class="row g-0 align-items-center pb-4">
             <div class="col-sm-6">
                 <div>
