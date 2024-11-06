@@ -68,6 +68,15 @@
                                             <li class="list-inline-item">
                                                 <a href="{{ url('/users/' . $user->id) }}" data-bs-toggle="tooltip" data-bs-placement="top" title="View" class="px-2"><i class="fa fa-eye font-size-18"></i></a>
                                             </li>
+                                            <li class="list-inline-item">
+                                                <form action="{{ route('users.destroy', $user->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-link text-danger" style="border: none; background: none;padding: 0 .5rem 0 .5rem;">
+                                                        <i style="color: #3b76e1;" class="fa fa-trash-alt font-size-16"></i> <!-- Font Awesome trash icon -->
+                                                    </button>
+                                                </form>
+                                            </li>
                                         </ul>
                                     </td>
                                     <td>

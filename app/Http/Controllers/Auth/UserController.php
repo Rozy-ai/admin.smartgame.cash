@@ -174,10 +174,12 @@ public function userActivity(Request $request)
     ]);
 }
 
-// public function destroy($id)
-// {
-//     $User = UsersTg::findOrFail($id);
-//     $User->delete();
-//     return redirect('users')->with('success', 'User deleted successfully.');
-// }
+public function destroy($id)
+{
+    $user = UsersTg::findOrFail($id);
+
+    $user->delete();
+    
+    return redirect('users')->with('success', 'User deleted successfully.');
+}
 }
